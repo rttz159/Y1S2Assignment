@@ -1,0 +1,1408 @@
+@charset "UTF-8";
+
+/*
+   Group Assignment
+   Filename: home.css
+
+   This file contains the styles for index.html or home page
+   Author: Raymond Teng Toh Zi
+*/
+
+body main > section:nth-child(2) {
+  height: fit-content;
+  background-color: #f4f6f8;
+}
+
+/* CAROUSEL-GALLERY */
+body main > section > section.carousel > div {
+  height: 40vh;
+  max-width: 1980px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  position: relative;
+}
+
+body main > section > section.carousel > div > div.carousel-section {
+  background-color: white;
+  flex: 1 0 100%;
+  position: absolute;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: none;
+  transition: opacity 0.6s ease-in-out;
+}
+
+body main > section > section.carousel > div > div.carousel-section.active {
+  opacity: 1;
+  display: block;
+}
+
+body
+  main
+  > section
+  > section.carousel
+  > div
+  > div.carousel-section.active.left {
+  animation: slideinLeft 1s ease;
+}
+
+body
+  main
+  > section
+  > section.carousel
+  > div
+  > div.carousel-section.active.right {
+  animation: slideinRight 1s ease;
+}
+
+body
+  main
+  > section
+  > section.carousel
+  > div
+  > div.carousel-section.active
+  > button {
+  animation: fadein 3s ease;
+}
+
+/* CAROUSEL-GALLERY BUTTON */
+body main > section > section.carousel > section.buttons {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10000;
+  top: -22vh;
+  padding: 0 1em;
+}
+
+body main > section > section.carousel > section > button {
+  border: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  padding: 5px;
+}
+
+body main > section > section.carousel > section > button:hover > img {
+  opacity: 0.7;
+}
+
+body main > section > section.carousel > section > button#chevronLeft {
+  left: 1em;
+}
+
+body main > section > section.carousel > section > button#chevronRight {
+  right: 1em;
+}
+
+body main > section > section.carousel > section > button:hover > img {
+  transition: opacity 0.4s ease;
+}
+
+/* CAROUSEL-GALLERY DIV 1 */
+body main > section > section.carousel > div > div:first-child > div {
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+}
+
+body
+  main
+  > section
+  > section.carousel
+  > div
+  > div:first-child
+  > div
+  > div:first-child {
+  float: left;
+  width: 50%;
+  height: 100%;
+  background-color: #6995bc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+body
+  main
+  > section
+  > section.carousel
+  > div
+  > div:first-child
+  > div
+  > div:first-child
+  > h2 {
+  letter-spacing: 1em;
+  text-transform: uppercase;
+  font-size: min(3vw, 3em);
+}
+
+body
+  main
+  > section
+  > section.carousel
+  > div
+  > div:first-child
+  > div
+  > div:first-child
+  > p {
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: min(1.5vw, 1em);
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+body
+  main
+  > section
+  > section.carousel
+  > div
+  > div:first-child
+  > div
+  > div:first-child
+  > a
+  > button {
+  border: none;
+  padding: 1em 1.5em;
+  border-radius: 1em;
+  color: #182436;
+  background-color: white;
+  font-size: min(1.5vw, 1em);
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  animation: fadein 1s ease;
+}
+
+body
+  main
+  > section
+  > section.carousel
+  > div
+  > div:first-child
+  > div
+  > div:first-child
+  > a
+  > button:hover {
+  color: white;
+  background-color: #182436;
+}
+
+body
+  main
+  > section
+  > section.carousel
+  > div
+  > div:first-child
+  > div
+  > div:first-child
+  > a:any-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+body
+  main
+  > section
+  > section.carousel
+  > div
+  > div:first-child
+  > div
+  > div:last-child {
+  float: right;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+}
+
+body
+  main
+  > section
+  > section.carousel
+  > div
+  > div:first-child
+  > div
+  > div:last-child
+  > img {
+  width: 100%;
+}
+
+/* CAROUSEL-GALLERY DIV 2 */
+body main > section > section.carousel > div > div:nth-child(2) > div {
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+}
+
+body
+  main
+  > section
+  > section.carousel
+  > div
+  > div:nth-child(2)
+  > div
+  > div:first-child {
+  float: left;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body
+  main
+  > section
+  > section.carousel
+  > div
+  > div:nth-child(2)
+  > div
+  > div:first-child
+  > img {
+  width: 100%;
+}
+
+body
+  main
+  > section
+  > section.carousel
+  > div
+  > div:nth-child(2)
+  > div
+  > div:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  float: right;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to left,
+    black,
+    grey,
+    lightgrey,
+    rgb(229, 229, 229),
+    white
+  );
+}
+
+body
+  main
+  > section
+  > section.carousel
+  > div
+  > div:nth-child(2)
+  > div
+  > div:last-child
+  > h2 {
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: min(3vw, 3em);
+}
+
+body
+  main
+  > section
+  > section.carousel
+  > div
+  > div:nth-child(2)
+  > div
+  > div:last-child
+  > p {
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: min(1.5vw, 1em);
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+body
+  main
+  > section
+  > section.carousel
+  > div
+  > div:nth-child(2)
+  > div
+  > div:last-child
+  > a
+  > button {
+  border: none;
+  padding: 1em 1.5em;
+  border-radius: 1em;
+  color: white;
+  background-color: black;
+  font-size: min(1.5vw, 1em);
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  animation: fadein 1s ease;
+}
+
+body
+  main
+  > section
+  > section.carousel
+  > div
+  > div:nth-child(2)
+  > div
+  > div:last-child
+  > a
+  > button:hover {
+  opacity: 0.7;
+}
+
+body
+  main
+  > section
+  > section.carousel
+  > div
+  > div:nth-child(2)
+  > div
+  > div:last-child
+  > a:any-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* CAROUSEL-GALLERY DIV 3 */
+body main > section > section.carousel > div > div:last-child > div {
+  height: 100%;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+body
+  main
+  > section
+  > section.carousel
+  > div
+  > div:last-child
+  > div
+  > div:first-child {
+  height: 50%;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+}
+
+body
+  main
+  > section
+  > section.carousel
+  > div
+  > div:last-child
+  > div
+  > div:first-child
+  > h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 1.5em;
+  letter-spacing: 0.5em;
+  color: white;
+}
+
+body
+  main
+  > section
+  > section.carousel
+  > div
+  > div:last-child
+  > div
+  > div:last-child {
+  height: 50%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+body
+  main
+  > section
+  > section.carousel
+  > div
+  > div:last-child
+  > div
+  > div:last-child
+  > a
+  > button {
+  border: none;
+  padding: 1em 1.5em;
+  border-radius: 1em;
+  color: white;
+  background-color: black;
+  font-size: min(1.5vw, 1em);
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  animation: fadein 1s ease;
+  margin-top: 1em;
+}
+
+body
+  main
+  > section
+  > section.carousel
+  > div
+  > div:last-child
+  > div
+  > div:last-child
+  > a
+  > button:hover {
+  opacity: 0.7;
+}
+
+body
+  main
+  > section
+  > section.carousel
+  > div
+  > div:last-child
+  > div
+  > div:last-child
+  > a:any-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+body
+  main
+  > section
+  > section.carousel
+  > div
+  > div:last-child
+  > div
+  > div:last-child
+  > p {
+  font-size: 1.5em;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+/* MOBILE ADS */
+body main#main > section > section.mobileAds {
+  display: block;
+}
+
+body main#main > section > section.mobileAds > div:first-child {
+  background-image: url("../assets/images/banner/bugatii\(medium\).jpg");
+  background-size: cover;
+  background-position: 40% 50%;
+  height: 80vh;
+  text-transform: uppercase;
+  color: white;
+  padding: 4em;
+  margin-bottom: 5em;
+}
+
+body main#main > section > section.mobileAds > div:first-child > h2 {
+  font-size: 2.5em;
+  margin-bottom: 0.2em;
+}
+
+body main#main > section > section.mobileAds > div:first-child > p {
+  margin-bottom: 2em;
+}
+
+body main#main > section > section.mobileAds > div:first-child > button {
+  outline: 2px solid white;
+  border: none;
+  background: transparent;
+  font-size: 1.05em;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 1em 0.5em;
+}
+
+body main#main > section > section.mobileAds > div:first-child > button > a {
+  text-decoration: none;
+  color: white;
+  padding: 1em 0.5em;
+}
+
+body main#main > section > section.mobileAds > div:first-child > button:hover {
+  background-color: white;
+}
+
+body
+  main#main
+  > section
+  > section.mobileAds
+  > div:first-child
+  > button:hover
+  > a {
+  color: black;
+}
+
+body main#main > section > section.mobileAds > div:last-child {
+  display: none;
+}
+
+/* WHYCHOOSEUS */
+body main > section > section.whyChooseUs {
+  height: fit-content;
+  padding: 1em;
+  padding-bottom: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body main > section > section.whyChooseUs > div:first-child {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body main > section > section.whyChooseUs > div:first-child {
+  width: 5em;
+  height: 3px;
+  border-radius: 1em;
+  background-color: #000;
+}
+
+body main > section > section.whyChooseUs > div:nth-child(2) > h2 {
+  width: fit-content;
+  padding-top: 0.5em;
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-bottom: 1em;
+}
+
+body main > section > section.whyChooseUs > div:last-child {
+  width: 100%;
+  display: flex;
+}
+
+body main > section > section.whyChooseUs > div:last-child > div:first-child {
+  width: 100%;
+  padding: 2em 0 2em 2em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+}
+
+body
+  main
+  > section
+  > section.whyChooseUs
+  > div:last-child
+  > div:first-child
+  > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 1em 0.5em;
+}
+
+body
+  main
+  > section
+  > section.whyChooseUs
+  > div:last-child
+  > div:first-child
+  > div
+  > img {
+  width: 48px;
+}
+
+body
+  main
+  > section
+  > section.whyChooseUs
+  > div:last-child
+  > div:first-child
+  > div
+  > h3 {
+  font-size: 1.1em;
+  margin: 1em 0;
+}
+
+body
+  main
+  > section
+  > section.whyChooseUs
+  > div:last-child
+  > div:first-child
+  > div
+  > p {
+  font-size: 1em;
+}
+
+body main > section > section.whyChooseUs > div:last-child > div:last-child {
+  width: 100%;
+  padding: 1em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body
+  main
+  > section
+  > section.whyChooseUs
+  > div:last-child
+  > div:last-child
+  > img {
+  width: 90%;
+  max-width: 650px;
+}
+
+/* REVIEW */
+body main > section > section.review {
+  background-color: #d2d6dd;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body main > section > section.review > section.cards-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-top: 2em;
+}
+
+body main > section > section.review > section.cards-wrapper > div.card {
+  flex-basis: 16em;
+  background-color: white;
+  height: 23em;
+  border-radius: 1em;
+  margin: 1em;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+body main > section > section.review > section.cards-wrapper > div.card:hover {
+  transform: translate3d(-5px, -5px, 0);
+  box-shadow: 5px 5px #444444;
+}
+
+body main > section > section.review > h2 {
+  font-size: 1.5em;
+  font-weight: 600;
+  text-align: center;
+}
+
+body
+  main
+  > section
+  > section.review
+  > section.cards-wrapper
+  > div.card
+  > div.image-content {
+  background-color: #777b81;
+  border-radius: 1em 1em 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  color: white;
+}
+
+body
+  main
+  > section
+  > section.review
+  > section.cards-wrapper
+  > div.card
+  > div.image-content
+  > p {
+  font-size: 1.25em;
+  padding-top: 0.5em;
+  font-weight: 500;
+}
+
+body main > section > section.review img {
+  border-radius: 50%;
+  width: 75%;
+  border: 5px solid white;
+}
+
+body
+  main
+  > section
+  > section.review
+  > section.cards-wrapper
+  > div.card
+  > div.text-content {
+  padding: 0.5em;
+  font-size: 1em;
+}
+
+body
+  main
+  > section
+  > section.review
+  > section.cards-wrapper
+  > div.card
+  > div.text-content
+  > p {
+  font-size: 1em;
+  padding-top: 1.5em;
+  text-align: center;
+}
+
+/* BRANDS */
+body main > section > section.brands {
+  width: 100%;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em 0;
+}
+
+body main > section > section.brands > div {
+  width: 5em;
+  height: 3px;
+  border-radius: 1em;
+  background-color: #000;
+}
+
+body main > section > section.brands > h2 {
+  width: fit-content;
+  padding-top: 0.5em;
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-bottom: 1em;
+}
+
+body main > section > section.brands > section {
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+}
+
+body main > section > section.brands > section > div {
+  margin: 0 0.5em;
+  position: relative;
+  background-color: #000;
+  transition: all 0.5s ease;
+}
+
+body main > section > section.brands > section > div:hover {
+  opacity: 0.9;
+}
+
+body main > section > section.brands > section > div > p {
+  text-align: center;
+  font-size: 1.25em;
+  background-color: #000;
+  color: white;
+  transition: all 1s ease;
+  padding: 0.5em 0;
+}
+
+body main > section > section.brands > section > div > img {
+  max-width: 500px;
+  max-height: 400px;
+  width: 100%;
+  cursor: pointer;
+  z-index: 9;
+}
+
+/* PERSONAL */
+body main > section > section.personal {
+  background-color: #d2d6dd;
+  min-height: 50vh;
+  padding: 2em 0;
+  background-image: url("../assets/images/main/bugatti.jpg");
+  background-position: 50% 50%;
+  background-size: cover;
+  position: relative;
+}
+
+body main > section > section.personal > div {
+  position: absolute;
+  background-color: #00000077;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body main > section > section.personal h2 {
+  margin-top: 1em;
+  font-size: 1.5em;
+  font-weight: 600;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+body main > section > section.personal p {
+  font-size: 1.1em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  text-align: center;
+  width: 80%;
+  color: white;
+}
+
+body main > section > section.personal button {
+  border: none;
+  font-size: 1.25em;
+  cursor: pointer;
+  transition: all 0.75s ease;
+  width: fit-content;
+  height: fit-content;
+}
+
+body main > section > section.personal button > a {
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.75s ease;
+  width: 100%;
+  height: 100%;
+  padding: 0.75em 1.5em;
+  background-color: white;
+  border-radius: 1em;
+}
+
+body main > section > section.personal button:hover > a {
+  color: white;
+  background-color: #353535;
+}
+
+/* BIGGER SCREEN SIZE */
+@media screen and (min-width: 1279px) {
+  body
+    main
+    > section
+    > section.whyChooseUs
+    > div:last-child
+    > div:first-child
+    > div {
+    padding: 1em;
+  }
+
+  body
+    main
+    > section
+    > section.whyChooseUs
+    > div:last-child
+    > div:first-child
+    > div
+    > img {
+    width: 56px;
+  }
+
+  body
+    main
+    > section
+    > section.whyChooseUs
+    > div:last-child
+    > div:first-child
+    > div
+    > h3 {
+    font-size: 1.35em;
+  }
+
+  body
+    main
+    > section
+    > section.whyChooseUs
+    > div:last-child
+    > div:first-child
+    > div
+    > p {
+    font-size: 1.25em;
+  }
+
+  body main > section > section.whyChooseUs > div:last-child > div:last-child {
+    width: 100%;
+    padding: 1em;
+  }
+
+  body
+    main
+    > section
+    > section.whyChooseUs
+    > div:last-child
+    > div:last-child
+    > img {
+    max-width: 800px;
+  }
+
+  body main#main > section > section.mobileAds > div:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding-top: 20vh;
+  }
+
+  body main#main > section > section.mobileAds > div:first-child > p {
+    margin-top: 2em;
+  }
+
+  body main#main > section > section.mobileAds > div:first-child > button {
+    margin-top: 1em;
+  }
+
+  /* REVIEWS */
+  body main > section > section.review {
+    padding: 2em;
+  }
+
+  body main > section > section.review > section.cards-wrapper > div.card {
+    flex-basis: 20em;
+    height: 29em;
+    margin: 1em;
+  }
+
+  body
+    main
+    > section
+    > section.review
+    > section.cards-wrapper
+    > div.card:hover {
+    transform: translate3d(-5px, -5px, 0);
+    box-shadow: 5px 5px #444444;
+  }
+
+  body main > section > section.review > h2 {
+    font-size: 1.5em;
+  }
+
+  body
+    main
+    > section
+    > section.review
+    > section.cards-wrapper
+    > div.card
+    > div.image-content {
+    padding: 2em;
+  }
+
+  body
+    main
+    > section
+    > section.review
+    > section.cards-wrapper
+    > div.card
+    > div.image-content
+    > p {
+    font-size: 1.5em;
+    padding-top: 0.5em;
+  }
+
+  body main > section > section.review img {
+    width: 75%;
+  }
+
+  body
+    main
+    > section
+    > section.review
+    > section.cards-wrapper
+    > div.card
+    > div.text-content {
+    padding: 0.5em;
+    font-size: 1.25em;
+    padding-top: 0.5em;
+  }
+
+  body
+    main
+    > section
+    > section.review
+    > section.cards-wrapper
+    > div.card
+    > div.text-content
+    > p {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  body main#main > section > section.carousel {
+    display: none;
+  }
+
+  body main > section > section.whyChooseUs > div:last-child {
+    flex-direction: column;
+  }
+
+  body main > section > section.whyChooseUs > div:last-child > div:first-child {
+    padding: 2em 0;
+  }
+
+  body
+    main
+    > section
+    > section.whyChooseUs
+    > div:last-child
+    > div:first-child
+    > div {
+    align-items: center;
+  }
+
+  body
+    main
+    > section
+    > section.whyChooseUs
+    > div:last-child
+    > div:first-child
+    > div
+    > img {
+    width: 48px;
+  }
+
+  body
+    main
+    > section
+    > section.whyChooseUs
+    > div:last-child
+    > div:first-child
+    > div
+    > h3 {
+    font-size: 0.9em;
+  }
+  body
+    main
+    > section
+    > section.whyChooseUs
+    > div:last-child
+    > div:first-child
+    > div
+    > p {
+    font-size: 0.8em;
+    text-align: center;
+  }
+
+  /* PREFERENCE */
+  body main > section > section.personal h2 {
+    font-size: 1.25em;
+    letter-spacing: 0.05em;
+  }
+
+  body main > section > section.personal p {
+    font-size: 0.9em;
+    margin-bottom: 1em;
+    width: 90%;
+  }
+
+  body main > section > section.personal button {
+    font-size: 1em;
+  }
+
+  /* REVIEWS */
+  body main > section > section.review > section.cards-wrapper > div.card {
+    flex-basis: 16em;
+    height: 24em;
+    margin: 1em;
+  }
+
+  body
+    main
+    > section
+    > section.review
+    > section.cards-wrapper
+    > div.card
+    > div.image-content
+    > p {
+    font-size: 1.25em;
+  }
+
+  body
+    main
+    > section
+    > section.review
+    > section.cards-wrapper
+    > div.card
+    > div.text-content {
+    padding: 0.5em;
+    font-size: 1.1em;
+    padding-top: 0em;
+  }
+
+  body
+    main
+    > section
+    > section.review
+    > section.cards-wrapper
+    > div.card
+    > div.text-content
+    > p {
+    font-size: 1em;
+  }
+
+  /* BRANDS */
+  body main > section > section.brands > section {
+    width: 100%;
+  }
+
+  body main > section > section.brands > h2 {
+    font-size: 1.25em;
+  }
+
+  body main > section > section.brands > section > div > p {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 672px) {
+  body main#main > section > section.mobileAds > div:first-child {
+    display: none;
+  }
+
+  body main#main > section > section.mobileAds > div:last-child {
+    display: block;
+    text-transform: uppercase;
+    position: relative;
+  }
+
+  body main#main > section > section.mobileAds > div:last-child > img {
+    width: 100%;
+  }
+
+  body main#main > section > section.mobileAds > div:last-child > div {
+    position: absolute;
+    top: 0;
+    padding: 3em 1em 0 1.5em;
+    color: white;
+  }
+
+  body main#main > section > section.mobileAds > div:last-child > div > h2 {
+    font-size: 2.5em;
+    margin-bottom: 0.2em;
+  }
+
+  body main#main > section > section.mobileAds > div:last-child > div > p {
+    margin-bottom: 2em;
+  }
+
+  body main#main > section > section.mobileAds > div:last-child > div > button {
+    outline: 2px solid white;
+    border: none;
+    background: transparent;
+    padding: 1em 0.5em;
+    font-size: 1.05em;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+  }
+
+  body main#main > section > section.mobileAds > div:last-child > div > button {
+    outline: 2px solid white;
+    border: none;
+    background: transparent;
+    font-size: 1.05em;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 1em 0.5em;
+  }
+
+  body
+    main#main
+    > section
+    > section.mobileAds
+    > div:last-child
+    > div
+    > button
+    > a {
+    text-decoration: none;
+    color: white;
+    padding: 1em 0.5em;
+  }
+
+  body
+    main#main
+    > section
+    > section.mobileAds
+    > div:last-child
+    > div
+    > button:hover {
+    background-color: white;
+  }
+
+  body
+    main#main
+    > section
+    > section.mobileAds
+    > div:last-child
+    > div
+    > button:hover
+    > a {
+    color: black;
+  }
+
+  /* BRANDS */
+  body main > section > section.brands {
+    padding-top: 2em;
+  }
+
+  body main > section > section.brands > section {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  body main > section > section.brands > div {
+    margin-top: 0;
+  }
+
+  body main > section > section.brands > section > div {
+    margin-top: 0.25em;
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  body main > section > section.whyChooseUs > div:last-child {
+    flex-direction: column;
+    margin-top: 0.25em;
+  }
+
+  body main > section > section.whyChooseUs > div:last-child > div:first-child {
+    padding: 0;
+  }
+
+  body
+    main
+    > section
+    > section.whyChooseUs
+    > div:last-child
+    > div:first-child
+    > div
+    > img {
+    width: 36px;
+  }
+
+  body
+    main
+    > section
+    > section.whyChooseUs
+    > div:last-child
+    > div:first-child
+    > div
+    > h3 {
+    font-size: 0.7em;
+  }
+
+  body
+    main
+    > section
+    > section.whyChooseUs
+    > div:last-child
+    > div:first-child
+    > div
+    > p {
+    font-size: 0.6em;
+    text-align: center;
+  }
+}
+
+/* SMALL SCREEN DEVICE */
+@media screen and (max-width: 349px) {
+  body main > section > section.review > section div.flip-box {
+    height: 17.5em;
+  }
+
+  body main > section > section.review > section > div.flip-box div.front p {
+    font-size: 1.25em;
+  }
+
+  body main > section > section.review > section > div.flip-box div.back > p {
+    font-size: 0.9em;
+  }
+
+  body
+    main
+    > section
+    > section.whyChooseUs
+    > div:last-child
+    > div:first-child
+    > div
+    > h3 {
+    font-size: 0.6em;
+  }
+
+  body main > section > section.whyChooseUs > div:nth-child(2) > h2 {
+    font-size: 1.25em;
+  }
+
+  body main > section > section.review > div > h2 {
+    font-size: 1.25em;
+  }
+
+  /* PERSONAL */
+  body main > section > section.personal button {
+    margin-top: 1em;
+  }
+
+  /* REVIEW */
+  body main > section > section.review > h2 {
+    font-size: 1.25em;
+  }
+}
+
+/* ANIMATION */
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translateY(2em);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideinLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100vw);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideinRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100vw);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

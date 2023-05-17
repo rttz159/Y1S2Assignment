@@ -1,0 +1,256 @@
+@charset "utf-8";
+
+* {
+  box-sizing: border-box;
+}
+
+body main > section:nth-child(2) {
+  height: fit-content;
+  background-color: #f4f6f8;
+}
+
+body .member {
+  min-height: 53vh;
+  height: fit-content;
+  background-image: url("../assets/images/membership/clubMember.jpg");
+  background-position: 50% 63%;
+  background-size: cover;
+  position: relative;
+  filter: blur(0.2px);
+}
+
+.member div {
+  position: absolute;
+  background-color: #53535377;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.member h2 {
+  margin-top: 0.3em;
+  font-size: 2.9em;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+}
+
+.member p {
+  margin-top: 0.5em;
+  font-size: 1.9em;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+}
+
+body .dinner {
+  padding-top: 3em;
+  min-height: 40vh;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: white;
+  justify-content: center;
+  padding-bottom: 1em;
+}
+
+.dinner div img {
+  max-width: 100%;
+}
+
+.dinner div ul {
+  margin-left: 1em;
+  list-style: square;
+  padding-bottom: 1em;
+}
+
+.dinner div h2 {
+  padding-top: 0.5em;
+  padding-bottom: 0.4em;
+  font-size: 1.8em;
+  text-align: center;
+}
+
+.dinner div ul li {
+  font-size: 1.3em;
+  list-style: square;
+  text-align: center;
+  padding-bottom: 0.5em;
+}
+
+body .launches {
+  min-height: 35vh;
+  height: fit-content;
+}
+
+.launches div {
+  padding: 2.5em 0;
+}
+
+.launches div h2 {
+  font-size: 2.3em;
+  border-bottom: 2px solid black;
+  width: 32%;
+  text-align: center;
+  justify-content: center;
+  margin-left: 34%;
+  margin-bottom: 1em;
+}
+
+.launches div ul li {
+  padding-top: 0.5em;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+body .activity {
+  min-height: 45vh;
+  height: fit-content;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+
+body .activity *,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body .activity .activity-container {
+  float: left;
+  width: 50%;
+  background-color: white;
+  padding: 0 8px;
+  padding-bottom: 2em;
+}
+
+body .activity .activity-container .image {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+body .activity .activity-container .activity-name {
+  padding: 0 16px;
+}
+
+body .activity .activity-container .activity-name > h2 {
+  font-size: 1.5em;
+  text-align: center;
+  padding: 1em 0;
+}
+
+body .activity .activity-container .activity-name::after,
+.activity-container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/*Big Screen Size*/
+@media screen and (min-width: 1279px) {
+  body .member {
+    width: 100%;
+  }
+
+  .member h2 {
+    font-size: 4em;
+  }
+
+  .member p {
+    font-size: 2.5em;
+  }
+
+  body .dinner img {
+    width: 100%;
+  }
+
+  .dinner div ul h2 {
+    font-size: 2em;
+  }
+
+  .dinner div ul li {
+    font-size: 1.4em;
+  }
+
+  body .launces {
+    padding-bottom: 1.5em;
+  }
+
+  body .launches h2 {
+    font-size: 3em;
+    word-spacing: 0.3em;
+    border-bottom: 2px solid black;
+    width: 35%;
+    margin-left: 33%;
+  }
+
+  .launches ul li {
+    font-size: 1.3em;
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  body .launches {
+    padding-bottom: 30px;
+  }
+
+  body .activity .activity-container {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  body .member {
+    min-height: 40vh;
+  }
+  body .member h2 {
+    font-size: 2.1em;
+  }
+
+  body .member p {
+    font-size: 1.5em;
+  }
+
+  body .dinner img {
+    width: 75%;
+    height: 45%;
+    margin-left: 13%;
+  }
+
+  body .dinner ul h2 {
+    font-size: 1.5em;
+  }
+
+  body .dinner ul li {
+    font-size: 1.25em;
+  }
+
+  body .launches {
+    padding-bottom: 30px;
+  }
+
+  body .launches h2 {
+    width: 58%;
+    font-size: 1.5em;
+    margin-left: 22%;
+  }
+
+  body .launches ul li {
+    font-size: 1.3em;
+  }
+
+  body .activity .activity-container {
+    width: 75%;
+  }
+
+  body .activity .activity-container .activity-name h2 {
+    font-size: 1em;
+  }
+}

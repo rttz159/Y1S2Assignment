@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keyword" content="Bugatti, Mercedes Benz, Tesla, Online Car Dealership, Luxury Cars">
+    <title>Lux-G | Utilities</title>
+    <link rel="stylesheet" href="stylesheet/reset.css">
+    <link rel="stylesheet" href="stylesheet/basic_layout.css">
+    <link rel="icon" href="assets/images/commonIcon/favicon.ico" type="image/x-icon">
+    <!--External Stylesheet-->
+    <link href="stylesheet/utilities.css" rel="stylesheet" />
+</head>
+
+<body>
+    <section class="grid-container">
+        <header id="header">
+            <nav>
+                <ul>
+                    <li>
+                        <div class="flex-container">
+                            <span class="center-flex">
+                                <div id="hamburger" class="hamburger-button" onclick="toggleIcon(this)">
+                                    <div class="bar1"></div>
+                                    <div class="bar2"></div>
+                                    <div class="bar3"></div>
+                                </div>
+                            </span>
+                            <figure>
+                                <img src="assets/images/commonIcon/logo_text.png" title="Lux-G" class="center"
+                                    alt="Text Logo for Lux-G" height="40" usemap="#logo-text">
+                                <map name="logo-text">
+                                    <area shape="rect" coords="0,0,155,57" href="index.html" alt="Home Page">
+                                </map>
+                            </figure>
+                            <button class="hidden" title="Log In or Sign Up">
+                                <a href="signUpLogIn.html">
+                                    <img src=" assets/images/commonIcon/iconsSignIn64x64.png" alt="Sign Up and Log In"
+                                        width="32" height="32">
+                                </a>
+                            </button>
+                        </div>
+                    </li>
+                    <span class="hamburgerMenu">
+                        <li class="not-hidden">
+                            <div>
+                                <input onfocus="listDisplayNone()" onblur="listDisplay()" onkeyup="searchMenuShow(this)"
+                                    type="text" name="search" id="search" placeholder="Search Models">
+                                <button><img src="assets/images/commonIcon/Search-Icon.png" alt="Search Icon" width="16"
+                                        height="16"></button>
+                            </div>
+                        </li>
+                        <li class="not-hidden"><a href="index.html">Home</a></li>
+                        <li class="not-hidden" onmouseover="dropDown1()" onmouseout="hideDropdownMenu1()">
+                            <a href="model.html">Models</a>
+                            <ul onmouseover="cancelHideDropdownMenu1()">
+                                <li><a href="model.html#tesla">Tesla</a></li>
+                                <li><a href="model.html#merc">Merc-Benz</a></li>
+                                <li><a href="model.html#bugatti">Bugatti</a></li>
+                            </ul>
+                        </li>
+                        <li class="not-hidden" onmouseover="dropDown2()" onmouseout="hideDropdownMenu2()">
+                            <a href="utilities.html">Services</a>
+                            <ul onmouseover="cancelHideDropdownMenu2()">
+                                <li><a href="afterSales.html">After Sales</a></li>
+                                <li><a href="bookingForm.html">Test Drive</a></li>
+                                <li><a href="utilities.html">Ultilities</a></li>
+                            </ul>
+                        </li>
+                        <li class="not-hidden"><a href="location.html">Location</a>
+                        </li>
+                        <li class="not-hidden"><a href="aboutUs.html">About</a></li>
+                        <li class="not-hidden"><a href="signUpLogIn.html"><span class="nowrap">Sign Up/Log
+                                    In</span></a></li>
+                    </span>
+                </ul>
+            </nav>
+        </header>
+        <main id="main">
+            <section class="searchMenu">
+                <ul id="searchUL">
+                    <li>
+                        <button onclick="searchMenuClose()">
+                            <img src="assets/images/commonIcon/cross.png" alt="Cross" width="36" height="36">
+                        </button>
+                    </li>
+                    <li><a href="Roadster.html">Tesla Roadster</a></li>
+                    <li><a href="underProgress.html">Tesla Model X Plaid</a></li>
+                    <li><a href="underProgress.html">Tesla Model S Plaid</a></li>
+                    <li><a href="underProgress.html">Tesla Model X Long Range Plus</a></li>
+                    <li><a href="underProgress.html">Mercedes-Mayback S 650</a></li>
+                    <li><a href="underProgress.html">Mercedes-AMG GT Black Series</a></li>
+                    <li><a href="underProgress.html">Mercedes-AMG E 63 S 4MATIC+</a></li>
+                    <li><a href="underProgress.html">Mercedes-Benz G-63</a></li>
+                    <li><a href="underProgress.html">Bugatti Centodieci</a></li>
+                    <li><a href="underProgress.html">Bugatti La Voiture Noire</a></li>
+                    <li><a href="underProgress.html">Bugatti Divo</a></li>
+                    <li><a href="underProgress.html">Bugatti Chiron Super Sport 300+</a></li>
+                    <p id="warning">There is no result matches.</p>
+                </ul>
+            </section>
+            <section>
+                <!--Code Here-->
+                <div class="container">
+                    <a href="insurance.html"><button id="button">Detail</button></a>
+                </div>
+
+                <div class="container1">
+                    <div id="item1">
+                        <h4>Waiver of Betterment Costs</h4>
+                        <p>Up to 10 years waiver</p>
+                        <div class="img">
+                            <img src="assets/images/utilities/waiver.jpg" alt="Waiver of Betterment Costs" width="300px"
+                                height="300px" />
+                        </div>
+                    </div>
+
+                    <div id="item2">
+                        <h4>Key Care Cover</h4>
+                        <p>Up to RM 1,0000</p>
+                        <div class="img">
+                            <img src="assets/images/utilities/key.png" alt="Key Care Cover" width="250px"
+                                height="230px" />
+                        </div>
+                    </div>
+
+
+                    <div id="item3">
+                        <h4>All Drivers Coverage</h4>
+                        <p>Inclusive company registeration</p>
+                        <div class="img">
+                            <img src="assets/images/utilities/driver.webp" alt="All Drivers Coverage" width="300px"
+                                height="300px" />
+                        </div>
+                    </div>
+
+                    <div id="item4">
+                        <h4>Agreed Value Coverage</h4>
+                        <p>Up to 12 years</p>
+                        <div class="img">
+                            <img src="assets/images/utilities/agreedvalue.png" alt="Agreed Value Coverage" width="300px"
+                                height="300px" />
+                        </div>
+                    </div>
+
+                    <div id="item5">
+                        <h4>Flood Relief Allowance</h4>
+                        <p>Up to RM 1,000</p>
+                        <div class="img">
+                            <img src="assets/images/utilities/flood.png" alt="Flood Relief Allowance" width="250px"
+                                height="250px" />
+                        </div>
+                    </div>
+
+
+                    <div id="item6">
+                        <h4>Policy Holder Personal Accident Coverage</h4>
+                        <p>Up to RM 15,000</p>
+
+
+                        <div class="img">
+                            <img src="assets/images/utilities/accident.png"
+                                alt="Policy Holder Personal Accident Coverage" width="250px" height="250px" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="serviceList">
+                    <div class="serviceWrapper">
+                        <div>
+                            <h1>5 Years Warranty</h1>
+                            <p>Sixty months is a lot of time. From the day you receive your car, you can be assured that
+                                your ownership experience will be smooth sailing. In the event that a part proves to be
+                                defective, LUX-G Malaysia will cover the cost of the necessary repairs and replacements.
+                                With unlimited mileage terms, you can be free to travel as you please.</p>
+                        </div>
+                        <img src="assets/images/utilities/warrantyCar1.jpg" alt="fixme" />
+                    </div>
+
+                    <div class="serviceWrapper o-left">
+                        <div>
+                            <h1>2 Year Extended Warranty</h1>
+                            <p>The fun doesn't need to stop. On LUX-G models that are currently covered by a
+                                3-year/100,000 km warranty plan, you have the choice to extend your coverage for an
+                                additional 24 months from the date of registration, or when you hit that magic 100,000
+                                kilometre mark.</p>
+                        </div>
+                        <img src="assets/images/utilities/warrantyCar2.jpg" alt="fixme" />
+                    </div>
+                </div>
+
+                <h1>LOAN CALCULATOR</h1>
+                <div class="formWrapper">
+                    <form name="calculator" method="get">
+
+
+
+                        <p><label for="model">MODEL</label></p>
+                        <select name="model" required id="model">
+
+                            <option value="220150">Tesla Roadster</option>
+                            <option value="462279.97">Tesla Model X Plaid</option>
+                            <option value="481159.66">Tesla Model S Plaid</option>
+                            <option value="462260.97">Tesla Model X Long Range Plus
+                            </option>
+
+
+
+                            <option value="896208.63">Mercedes-Maybach S 650</option>
+                            <option value="1558888">Mercedes-AMG GT Black Series
+                            </option>
+                            <option value="1118888">Mercedes-AMG E 63 S 4MATIC+</option>
+                            <option value="1788888">Mercedes-Benz G-63</option>
+
+
+                            <option value="37865800">Bugatti Centodieci</option>
+                            <option value="52836000">Bugatti La Voiture Noire</option>
+                            <option value="23776200">Bugatti Divo</option>
+                            <option value="17171700">Bugatti Chiron Super Sport 300+
+                            </option>
+
+                        </select>
+
+                        <script>
+
+
+
+
+                        </script>
+
+                        <div id="modelImage"></div>
+
+                        <p><label for="downPayment">DOWNPAYMENT (RM)</label></p>
+                        <input type="number" name="downPayment" id="downPayment" required placeholder="RM 10000"
+                            value="" />
+
+                        <p><label for="paymentTerm">PAYMENT TERM</p>
+                        <select name="paymentTerm" id="paymentTerm" required>
+                            <option value="1">1 Year</option>
+                            <option value="3">3 Year</option>
+                            <option value="6">6 Year</option>
+                        </select>
+
+                        <p><label for="interest">INTEREST RATE (%)</label></p>
+                        <input type="text" name="interest" id="interest" disabled value="2.6" />
+
+
+
+                        <button id="calculateBtn" onclick="return false">CALCULATE</button>
+
+                        <div class="result">
+
+                            <br />
+                            <p><span id=downPaymentResult></span></p>
+                            <br />
+                            <p><span id=loanAmount></span></p>
+                            <br />
+                            <p><span id=monthlyPayment></span></p>
+                        </div>
+
+                        <script>
+
+                            const downPaymentElement = document.getElementById('downPaymentResult');
+                            const loanAmountElement = document.getElementById('loanAmount');
+                            const monthlyPayElement = document.getElementById('monthlyPayment');
+
+                            document.getElementById('calculateBtn').addEventListener('click', function () {
+
+                                let actualPrice = document.getElementById("model").value;
+                                let downPayment = document.getElementById("downPayment").value;
+
+                                let interest = document.getElementById("interest").value;
+
+                                let period = document.getElementById("paymentTerm").value;
+
+                                let newPrice = actualPrice - downPayment;
+                                let loan = newPrice + ((newPrice * interest / 100) * period);
+                                let monthlyLoan = loan / 12;
+                                console.log(actualPrice)
+                                console.log(downPayment)
+                                console.log(interest)
+                                console.log(period)
+                                console.log('newPrice: ', newPrice)
+                                console.log('loan: ', loan)
+
+                                downPaymentElement.innerHTML = `<p>After deducting a down payment of RM ${downPayment} from the car price RM ${actualPrice}, you get a total of RM ${newPrice}.</p>`
+                                loanAmountElement.innerHTML = `<p>So, after an interest of ${interest}% you will have to pay the total amount: RM ${loan.toFixed(2)} over the course of RM ${period} year/s.</p>`
+                                monthlyPayElement.innerHTML = `<p>You can pay RM ${monthlyLoan.toFixed(2)} every month.</p>`
+                            })
+                        </script>
+
+                    </form>
+                </div>
+            </section>
+            <section class="chatbot">
+                <button onclick="chatbot()"><img src="assets/images/commonIcon/bot.png" alt="Chat Bot"></button>
+                <iframe id="chatBot" allow="microphone;" width="320" height="410"
+                    src="https://console.dialogflow.com/api-client/demo/embedded/26b61089-2a95-4256-a32c-c09c860e716e">
+                </iframe>
+                <audio id="chatBotAudio">
+                    <source src="assets/audio/chatbot.wav" type="audio/wav">
+                    <source src="assets/audio/chatbot.mp3" type="audio/mp3">
+                    <embed src="assets/audio/chatbot.mp3" type="audio/mp3">
+                    Your browser doesn't support HTML5
+                </audio>
+            </section>
+        </main>
+        <footer id="footer">
+            <button>
+                <a href="#header">
+                    <img src="assets/images/commonIcon/arrow-up.png" alt="Arrow UP" width="32">
+                    <span>UP</span>
+                </a>
+            </button>
+            <div>
+                <div>
+                    <h2>Visit Us on</h2>
+                    <ul>
+                        <li class="icon"><a href="https://www.instagram.com/luxurycarrental_legendary/"><img
+                                    src="assets/images/commonIcon/iconsInstagram50x50.png" alt="" width="30"></a></li>
+                        <li class="icon"><a href="https://www.facebook.com/luxurycarrentallegendary"><img
+                                    src="assets/images/commonIcon/iconsFacebook50x50.png" alt="" width="30"></a>
+                        </li>
+                        <li class="icon"><a href="https://wa.me/+60103605169"><img
+                                    src="assets/images/commonIcon/iconsWhatsapp50x50.png" alt="" width="30"></a>
+                        </li>
+                    </ul>
+                </div>
+                <section class="flex-container">
+                    <div>
+                        <h2>
+                            Quick Links
+                        </h2>
+                        <ul>
+                            <li><a href="model.html#tesla">Tesla</a></li>
+                            <li><a href="model.html#merc">Merc-Benz</a></li>
+                            <li><a href="model.html#bugatti">Bugatti</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2>
+                            About
+                        </h2>
+                        <ul>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="aboutUs.html">About Us</a></li>
+                            <li><a href="location.html">Location</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2>
+                            More
+                        </h2>
+                        <ul>
+                            <li><a href="specialEvent.html">Special Events</a></li>
+                            <li><a href="promotion.html">Promotions</a></li>
+                            <li><a href="insurance.html">Insurance</a></li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+            <div>
+                <a href="siteMap.html">
+                    <p>Copyright © 2023 Lux-G. All rights reserved.</p>
+                </a>
+            </div>
+        </footer>
+    </section>
+    <script src="scripts/common.js"></script>
+    <!--External Scripts-->
+</body>
+
+
+</html>

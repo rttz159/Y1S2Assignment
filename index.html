@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--
+    Group Assignment
+    Author: Raymond Teng Toh Zi
+    Filename: index.html
+   -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keyword" content="Bugatti, Mercedes Benz, Tesla, Online Car Dealership, Luxury Cars">
+    <title>Lux-G | Home</title>
+    <link rel="stylesheet" href="stylesheet/reset.css">
+    <link rel="stylesheet" href="stylesheet/basic_layout.css">
+    <link rel="icon" href="assets/images/commonIcon/favicon.ico" type="image/x-icon">
+    <!--External Stylesheet-->
+    <link rel="stylesheet" href="stylesheet/home.css">
+</head>
+
+<body>
+    <section class="grid-container">
+        <header id="header">
+            <nav>
+                <ul>
+                    <li>
+                        <div class="flex-container">
+                            <span class="center-flex">
+                                <div id="hamburger" class="hamburger-button" onclick="toggleIcon(this)">
+                                    <div class="bar1"></div>
+                                    <div class="bar2"></div>
+                                    <div class="bar3"></div>
+                                </div>
+                            </span>
+                            <figure>
+                                <img src="assets/images/commonIcon/logo_text.png" title="Lux-G" class="center"
+                                    alt="Text Logo for Lux-G" height="40" usemap="#logo-text">
+                                <map name="logo-text">
+                                    <area shape="rect" coords="0,0,155,57" href="index.html" alt="Home Page">
+                                </map>
+                            </figure>
+                            <button class="hidden" title="Log In or Sign Up">
+                                <a href="signUpLogIn.html">
+                                    <img src=" assets/images/commonIcon/iconsSignIn64x64.png" alt="Sign Up and Log In"
+                                        width="32" height="32">
+                                </a>
+                            </button>
+                        </div>
+                    </li>
+                    <span class="hamburgerMenu">
+                        <li class="not-hidden">
+                            <div>
+                                <input onfocus="listDisplayNone()" onblur="listDisplay()" onkeyup="searchMenuShow(this)"
+                                    type="text" name="search" id="search" placeholder="Search Models">
+                                <button><img src="assets/images/commonIcon/Search-Icon.png" alt="Search Icon" width="16"
+                                        height="16"></button>
+                            </div>
+                        </li>
+                        <li class="not-hidden"><a href="index.html">Home</a></li>
+                        <li class="not-hidden" onmouseover="dropDown1()" onmouseout="hideDropdownMenu1()">
+                            <a href="model.html">Models</a>
+                            <ul onmouseover="cancelHideDropdownMenu1()">
+                                <li><a href="model.html#tesla">Tesla</a></li>
+                                <li><a href="model.html#merc">Merc-Benz</a></li>
+                                <li><a href="model.html#bugatti">Bugatti</a></li>
+                            </ul>
+                        </li>
+                        <li class="not-hidden" onmouseover="dropDown2()" onmouseout="hideDropdownMenu2()">
+                            <a href="service.html">Services</a>
+                            <ul onmouseover="cancelHideDropdownMenu2()">
+                                <li><a href="afterSales.html">After Sales</a></li>
+                                <li><a href="bookingForm.html">Test Drive</a></li>
+                                <li><a href="utilities.html">Ultilities</a></li>
+                            </ul>
+                        </li>
+                        <li class="not-hidden"><a href="location.html">Location</a>
+                        </li>
+                        <li class="not-hidden"><a href="aboutUs.html">About</a></li>
+                        <li class="not-hidden"><a href="signUpLogIn.html"><span class="nowrap">Sign Up/Log
+                                    In</span></a></li>
+                    </span>
+                </ul>
+            </nav>
+        </header>
+        <main id="main">
+            <section class="searchMenu">
+                <ul id="searchUL">
+                    <li>
+                        <button onclick="searchMenuClose()">
+                            <img src="assets/images/commonIcon/cross.png" alt="Cross" width="36" height="36">
+                        </button>
+                    </li>
+                    <li><a href="Roadster.html">Tesla Roadster</a></li>
+                    <li><a href="underProgress.html">Tesla Model X Plaid</a></li>
+                    <li><a href="underProgress.html">Tesla Model S Plaid</a></li>
+                    <li><a href="underProgress.html">Tesla Model X Long Range Plus</a></li>
+                    <li><a href="underProgress.html">Mercedes-Mayback S 650</a></li>
+                    <li><a href="underProgress.html">Mercedes-AMG GT Black Series</a></li>
+                    <li><a href="underProgress.html">Mercedes-AMG E 63 S 4MATIC+</a></li>
+                    <li><a href="underProgress.html">Mercedes-Benz G-63</a></li>
+                    <li><a href="underProgress.html">Bugatti Centodieci</a></li>
+                    <li><a href="underProgress.html">Bugatti La Voiture Noire</a></li>
+                    <li><a href="underProgress.html">Bugatti Divo</a></li>
+                    <li><a href="underProgress.html">Bugatti Chiron Super Sport 300+</a></li>
+                    <p id="warning">There is no result matches.</p>
+                </ul>
+            </section>
+            <section>
+                <section class="mobileAds">
+                    <div>
+                        <h2>Indulge in Luxury: Lux-G</h2>
+                        <p>Your Ultimate Online Car Destination</p>
+                        <button><a href="index.html#whyChooseUs">dicover more</a></button>
+                    </div>
+                    <div>
+                        <img src="assets/images/banner/bugatti(small).jpg" alt="bugatti vertical">
+                        <div>
+                            <h2>Indulge in Luxury: <span class="nowrap">Lux-G</span></h2>
+                            <p>Your Ultimate Online Car Destination</p>
+                            <button><a href="index.html#whyChooseUs">dicover more</a></button>
+                        </div>
+                    </div>
+                </section>
+                <section class="carousel">
+                    <div>
+                        <div class="carousel-section">
+                            <div>
+                                <div>
+                                    <h2>Lux-G</h2>
+                                    <p>What <span style="color: #182436; font-weight: 700;">color</span> is your
+                                        bugatti?
+                                    </p>
+                                    <a href="bookingForm.html"><button>Book Now</button></a>
+                                </div>
+                                <div><img src="assets/images/banner/bugatti.png" alt="bugatti"></div>
+                            </div>
+                        </div>
+                        <div class="carousel-section">
+                            <div>
+                                <div><img src="assets/images/banner/tesla.jpg" alt="tesla"></div>
+                                <div>
+                                    <h2>Accelerate Your Future</h2>
+                                    <p>
+                                        Join the Electric Revolution with <span
+                                            style="font-size: large;font-weight: 800;color: white;">Lux-G</span>
+                                    </p>
+                                    <a href="bookingForm.html"><button>Book Now</button></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-section">
+                            <div>
+                                <div>
+                                    <h2>Experience Luxury at Its Finest</h2>
+                                </div>
+                                <div>
+                                    <p>Join Our Exclusive Cars Showcase Event Now!
+                                    </p>
+                                    <a href="specialEvent.html"><button>More Info</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <section class="buttons">
+                        <button id="chevronLeft" onclick="prevCarouselItem()"><img
+                                src="assets/images/commonIcon/chevronLeft.png" alt="chevron left" width="36px"></button>
+                        <button id="chevronRight" onclick="nextCarouselItem()"><img
+                                src="assets/images/commonIcon/chevronRight.png" alt="chevron right"
+                                width="36px"></button>
+                    </section>
+                </section>
+                <section class="whyChooseUs" id="whyChooseUs">
+                    <div></div>
+                    <div>
+                        <h2>
+                            Why Choose Us?
+                        </h2>
+                    </div>
+                    <div>
+                        <div>
+                            <div>
+                                <img src="assets/images/main/iconInspection.png" alt="Inspection" />
+                                <h3>
+                                    Professional Inspectors
+                                </h3>
+                                <p>Rest easy knowing that product will be inspected and valued professionally.</p>
+                            </div>
+                            <div>
+                                <img src="assets/images/main/iconLowPrice.png" alt="Low Price" />
+                                <h3>
+                                    Lower Price
+                                </h3>
+                                <p>Enjoy lower prices that are competitive with market rates.</p>
+                            </div>
+                            <div>
+                                <img src="assets/images/main/iconPaperWork.png" alt="Paper Work" />
+                                <h3>
+                                    No Paperwork Hassle
+                                </h3>
+                                <p>Relax while we settle all the paperwork for you.</p>
+                            </div>
+                            <div>
+                                <img src="assets/images/main/iconsFastPayment.png" alt="Fast Payment" />
+                                <h3>
+                                    Fast Payment
+                                </h3>
+                                <p>Purchase your dream car without going through tedious process.</p>
+                            </div>
+                        </div>
+                        <div><img src="assets/images/main/thumbsUp.jpg" alt="Man thumbs up"></div>
+                    </div>
+                </section>
+                <section class="review">
+                    <h2>Review From Our Customer</h2>
+                    <section class="cards-wrapper">
+                        <div class="card">
+                            <div class="image-content">
+                                <img src="assets/images/main/jenny.jpg" alt="Jenny">
+                                <p>Jenny Ling</p>
+                            </div>
+                            <div class="text-content">
+                                <p>Lux-G made my car-buying experience seamless and affordable. Their customer service
+                                    was top-notch!</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="image-content">
+                                <img src="assets/images/main/johnny.jpg" alt="Johnny">
+                                <p>Johnny Pang</p>
+                            </div>
+                            <div class="text-content">
+                                <p>Thanks, Lux-G, for making my dream of owning a luxury car a reality! The online
+                                    buying process was hassle-free.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="image-content">
+                                <img src="assets/images/main/david.jpg" alt="David">
+                                <p>David Chiew</p>
+                            </div>
+                            <div class="text-content">
+                                <p>Lux-G is the best online car dealership out there! I'm thrilled with my purchase and
+                                    will be a returning customer.</p>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+                <section class="personal">
+                    <div>
+                        <h2>Find Your Dream Luxury Car</h2>
+                        <p>Simply input your preferences, and our algorithm will do the rest, matching you with luxury
+                            cars
+                            that meet your unique needs and desires.</p>
+                        <button><a href="vehiclePreference.html">Try It</a></button>
+                    </div>
+                </section>
+                <section class="brands">
+                    <div></div>
+                    <h2>Feature On</h2>
+                    <section>
+                        <div>
+                            <img src="assets/images/main/bugattiBlue.jpg" alt="Blue Bugatti" usemap="#bugatti">
+                            <map name="bugatti">
+                                <area shape="rect" coords="0,0,500,400" href="model.html#bugatti" alt="bugatti">
+                            </map>
+                            <p>BUGATTI</p>
+                        </div>
+                        <div>
+                            <img src="assets/images/main/teslaBlack.jpg" alt="Black Tesla" usemap="#tesla">
+                            <map name="tesla">
+                                <area shape="rect" coords="0,0,500,400" href="model.html#tesla" alt="bugatti">
+                            </map>
+                            <p>TESLA</p>
+                        </div>
+                        <div>
+                            <img src="assets/images/main/mercedesFront.jpg" alt="Jeep Front" usemap="#mercBenz">
+                            <map name="mercBenz">
+                                <area shape="rect" coords="0,0,500,400" href="model.html#merc" alt="bugatti">
+                            </map>
+                            <p>MERC-BENZ</p>
+                        </div>
+                    </section>
+                </section>
+            </section>
+            <section class="chatbot">
+                <button onclick="chatbot()"><img src="assets/images/commonIcon/bot.png" alt="Chat Bot"></button>
+                <iframe id="chatBot" allow="microphone;" width="320" height="410"
+                    src="https://console.dialogflow.com/api-client/demo/embedded/26b61089-2a95-4256-a32c-c09c860e716e">
+                </iframe>
+                <audio id="chatBotAudio">
+                    <source src="assets/audio/chatbot.wav" type="audio/wav">
+                    <source src="assets/audio/chatbot.mp3" type="audio/mp3">
+                    <embed src="assets/audio/chatbot.mp3" type="audio/mp3">
+                    Your browser doesn't support HTML5
+                </audio>
+            </section>
+        </main>
+        <footer id="footer">
+            <button>
+                <a href="#header">
+                    <img src="assets/images/commonIcon/arrow-up.png" alt="Arrow UP" width="32">
+                    <span>UP</span>
+                </a>
+            </button>
+            <div>
+                <div>
+                    <h2>Visit Us on</h2>
+                    <ul>
+                        <li class="icon"><a href="https://www.instagram.com/luxurycarrental_legendary/"><img
+                                    src="assets/images/commonIcon/iconsInstagram50x50.png" alt="" width="30"></a></li>
+                        <li class="icon"><a href="https://www.facebook.com/luxurycarrentallegendary"><img
+                                    src="assets/images/commonIcon/iconsFacebook50x50.png" alt="" width="30"></a>
+                        </li>
+                        <li class="icon"><a href="https://wa.me/+60103605169"><img
+                                    src="assets/images/commonIcon/iconsWhatsapp50x50.png" alt="" width="30"></a>
+                        </li>
+                    </ul>
+                </div>
+                <section class="flex-container">
+                    <div>
+                        <h2>
+                            Quick Links
+                        </h2>
+                        <ul>
+                            <li><a href="model.html#tesla">Tesla</a></li>
+                            <li><a href="model.html#merc">Merc-Benz</a></li>
+                            <li><a href="model.html#bugatti">Bugatti</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2>
+                            About
+                        </h2>
+                        <ul>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="aboutUs.html">About Us</a></li>
+                            <li><a href="location.html">Location</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2>
+                            More
+                        </h2>
+                        <ul>
+                            <li><a href="specialEvent.html">Special Events</a></li>
+                            <li><a href="promotion.html">Promotions</a></li>
+                            <li><a href="insurance.html">Insurance</a></li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+            <div>
+                <a href="siteMap.html">
+                    <p>Copyright © 2023 Lux-G. All rights reserved.</p>
+                </a>
+            </div>
+        </footer>
+    </section>
+    <script src="scripts/common.js"></script>
+    <!--External Script-->
+    <script src="scripts/home.js"></script>
+</body>
+
+
+</html>

@@ -1,0 +1,359 @@
+@charset "UTF-8";
+
+/*
+   Group Assignment
+   Filename: signUpLogIn.css
+
+   This file contains the styles for sign up or log in page
+   Author: Raymond Teng Toh Zi
+*/
+
+/* UTILITIES STYLE */
+.emphasize {
+  text-transform: uppercase;
+  font-size: 1.25em;
+}
+
+/* LOGIN AND SIGNUP */
+section.signUpAndLogIn {
+  width: 100%;
+  padding: 5em 0;
+  height: 100vh;
+  background-image: url("../assets/images/wallpaper/mclarenYellow.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section.signUpAndLogIn > div {
+  background-color: transparent;
+  width: clamp(20em, 80%, 800px);
+  padding: 2em 0.25em;
+  display: flex;
+  backdrop-filter: blur(10px);
+}
+
+section.signUpAndLogIn > div > div {
+  padding: 2em;
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #fff;
+  border-radius: 1em;
+  margin: 0 1em;
+  height: 30em;
+}
+
+section.signUpAndLogIn > div > div > form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: opacity 0.5s ease;
+}
+
+section.signUpAndLogIn > div > div > form > div {
+  width: 50%;
+}
+
+section.signUpAndLogIn > div > div > form > h2 {
+  width: 80%;
+  font-size: 1.25em;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  text-align: center;
+  border-bottom: 2px solid #fff;
+}
+
+section.signUpAndLogIn > div > div > form input {
+  width: 120%;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #fff;
+  position: relative;
+  bottom: 0;
+  left: -1em;
+  height: 2.5em;
+  padding-top: 1em;
+  color: #fff;
+  font-size: 1em;
+  transition: 0.5s;
+}
+
+section.signUpAndLogIn > div > div > form input:focus:valid {
+  border-bottom: 2px solid rgb(104, 255, 58);
+}
+
+section.signUpAndLogIn > div > div > form input:focus:invalid {
+  border-bottom: 2px solid rgb(255, 0, 0);
+}
+
+section.signUpAndLogIn > div > div > form > div.password {
+  position: relative;
+}
+
+section.signUpAndLogIn > div > div > form label {
+  position: relative;
+  font-size: 1em;
+  top: 1.75em;
+  left: -1em;
+  transition: 0.3s;
+  z-index: -1;
+  display: block;
+}
+
+section.signUpAndLogIn > div > div > form > div > img {
+  position: absolute;
+  cursor: pointer;
+  right: -1em;
+  top: 1.5em;
+}
+
+section.signUpAndLogIn > div > div > form label.label-selected {
+  position: relative;
+  font-size: 13px;
+  top: 8px;
+  left: -1.25em;
+  color: #f0f0f0;
+}
+
+section.signUpAndLogIn > div > div > form > div.button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+section.signUpAndLogIn > div > div > form button {
+  border: none;
+  background-color: white;
+  color: black;
+  font-weight: 500;
+  padding: 0.8em;
+  width: 50%;
+  border-radius: 2em;
+  transition: 0.5s;
+  transform: translate(0px, 0px);
+  cursor: pointer;
+  margin-top: 3em;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+section.signUpAndLogIn > div > div > form button:hover {
+  box-shadow: 0px 8px 15px -10px rgb(61, 61, 61);
+  transform: translate(0px, -3px);
+}
+
+section.signUpAndLogIn > div > div > form > p {
+  font-size: 14px;
+  color: #fff;
+  text-decoration: underline;
+  cursor: pointer;
+  display: none;
+}
+
+section.signUpAndLogIn > div > div > form > p:hover {
+  opacity: 0.85;
+}
+
+/* LOGIN */
+section.signUpAndLogIn > div > div#logIn > form.display {
+  opacity: 1;
+}
+
+section.signUpAndLogIn > div > div#logIn > form.not-display {
+  opacity: 0;
+}
+
+/* SIGNUP */
+section.signUpAndLogIn > div > div#signUp > form.display {
+  opacity: 1;
+}
+
+section.signUpAndLogIn > div > div#signUp > form.not-display {
+  opacity: 0;
+}
+
+/* OVERLAY */
+section.signUpAndLogIn > div > div#overlay {
+  background-color: #fff;
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  transform: translate(-1em, -25px);
+  border-radius: 25px;
+  transition: 0.5s;
+  color: black;
+  padding: 4em;
+}
+
+section.signUpAndLogIn > div > div#overlay.left {
+  transform: translate(-1em, -25px);
+}
+
+section.signUpAndLogIn > div > div#overlay.right {
+  transform: translate(24em, -25px);
+}
+
+section.signUpAndLogIn > div > div#overlay.right > div.LogIn {
+  display: none;
+}
+
+section.signUpAndLogIn > div > div#overlay.left > div.SignUp {
+  display: none;
+}
+
+section.signUpAndLogIn > div > div#overlay h2 {
+  text-align: center;
+  font-size: 2.5em;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid #000;
+}
+
+section.signUpAndLogIn > div > div#overlay p {
+  text-align: center;
+  font-size: 1.1em;
+}
+
+section.signUpAndLogIn > div > div#overlay button {
+  border: none;
+  background-color: black;
+  color: white;
+  font-weight: 500;
+  padding: 1em;
+  width: 50%;
+  border-radius: 2em;
+  transition: 0.5s;
+  transform: translate(0px, 0px);
+  cursor: pointer;
+  margin-top: 3em;
+  text-align: center;
+}
+
+section.signUpAndLogIn > div > div#overlay button:hover {
+  box-shadow: 0px 8px 15px -10px rgb(61, 61, 61);
+  transform: translate(0px, -3px);
+}
+
+section.signUpAndLogIn > div > div#overlay > div.LogIn {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section.signUpAndLogIn > div > div#overlay > div.SignUp {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 980px) {
+  section.signUpAndLogIn {
+    height: fit-content;
+    min-height: 80vh;
+  }
+
+  section.signUpAndLogIn > div {
+    width: clamp(25em, 60%, 23em);
+  }
+
+  section.signUpAndLogIn > div > div {
+    min-height: 25em;
+  }
+
+  section.signUpAndLogIn > div > div#overlay {
+    display: none;
+  }
+
+  section.signUpAndLogIn > div > div > form > p {
+    display: block;
+  }
+
+  section.signUpAndLogIn > div > div > form > div {
+    width: 80%;
+  }
+
+  section.signUpAndLogIn > div > div > form > h2 {
+    width: 50%;
+    font-size: 1em;
+  }
+
+  section.signUpAndLogIn > div > div > form input {
+    width: 120%;
+    height: 2em;
+    font-size: 1em;
+    padding-top: 0.8em;
+  }
+
+  section.signUpAndLogIn > div > div > form label {
+    font-size: 14px;
+  }
+
+  section.signUpAndLogIn > div > div > form label.label-selected {
+    font-size: 13px;
+  }
+
+  section.signUpAndLogIn > div > div > form button {
+    font-size: 0.8em;
+    padding: 0.6em;
+  }
+
+  section.signUpAndLogIn > div > div > form > p {
+    font-size: 10px;
+  }
+
+  section.signUpAndLogIn > div > div#signUp.mobile-display-none {
+    display: none;
+  }
+
+  section.signUpAndLogIn > div > div#logIn.mobile-display-none {
+    display: none;
+  }
+
+  section.signUpAndLogIn > div > div#signUp.mobile-display {
+    display: flex;
+  }
+
+  section.signUpAndLogIn > div > div#logIn.mobile-display {
+    display: flex;
+  }
+
+  section.signUpAndLogIn > div > div > form > div.button {
+    margin-bottom: 2em;
+  }
+
+  section.signUpAndLogIn > div > div > form > div > img {
+    right: -1em;
+    top: 1em;
+  }
+}
+
+@media screen and (max-width: 435px) {
+  section.signUpAndLogIn {
+    height: fit-content;
+    min-height: 50vh;
+    padding: 0;
+  }
+
+  section.signUpAndLogIn > div {
+    width: clamp(25em, 60%, 23em);
+    height: fit-content;
+  }
+
+  section.signUpAndLogIn > div > div {
+    height: 20em;
+  }
+}

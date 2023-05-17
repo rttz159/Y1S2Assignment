@@ -1,0 +1,194 @@
+body .stusec {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.line {
+  background-color: black;
+}
+
+.faq {
+  font-size: xx-large;
+  margin-top: 2em;
+}
+
+.twoside {
+  display: flex;
+  width: 100%;
+}
+
+.choosebox {
+  width: 40%;
+  display: flex;
+  height: 100vh;
+  position: sticky;
+  top: 7em;
+  left: 0;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.colum {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.article {
+  font-size: larger;
+  font-style: bold;
+  text-align: center;
+}
+
+.active {
+  color: black;
+  text-align: center;
+  font-family: "Cambria", "Cochin", Georgia, Times, "Times New Roman", serif;
+  margin-left: 3em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.ans {
+  color: gray;
+  font-family: "Cambria", "Cochin", Georgia, Times, "Times New Roman", serif;
+  font-size: 20px;
+  margin-left: 1em;
+  margin-top: 1em;
+}
+
+.smalltitle {
+  font-size: x-large;
+}
+
+.stubox {
+  width: 60%;
+}
+
+.stusec {
+  border-top: 2px solid black;
+}
+
+section.stusec div details {
+  padding: 1.5em;
+  cursor: pointer;
+  font-size: larger;
+  flex-direction: row;
+}
+
+details[open] {
+  animation: sweep 0.5s ease;
+}
+
+@keyframes sweep {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .twoside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .choosebox {
+    position: static;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+  }
+
+  .main-nav {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .colum {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 1em 2em;
+    justify-content: center;
+    border: 1px solid black;
+  }
+
+  .active {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+  }
+
+  .stubox {
+    width: 80%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .flex {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .smalltitle {
+    font-size: 1.5em;
+  }
+
+  .ans {
+    font-size: 0.75em;
+  }
+
+  main section:nth-child(2) summary {
+    font-size: 1em;
+  }
+
+  .faq {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .faq {
+    font-size: 1.5em;
+  }
+
+  .smalltitle {
+    font-size: 1.25em;
+  }
+
+  .stubox {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main section:nth-child(2) summary {
+    font-size: 0.75em;
+  }
+
+  .smalltitle {
+    font-size: 1em;
+  }
+
+  .faq {
+    font-size: 1.25em;
+  }
+}

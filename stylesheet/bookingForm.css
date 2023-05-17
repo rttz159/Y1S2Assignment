@@ -1,0 +1,236 @@
+@charset "utf-8";
+
+.grid-container {
+  background-color: rgb(16, 16, 16);
+}
+
+body main > section:nth-child(2) {
+  background-color: rgb(43, 44, 45);
+  color: white;
+  box-shadow: inset 15px 15px 25px rgba(71, 71, 71, 0.4),
+    inset -15px -15px 25px rgba(101, 101, 101, 0.4);
+}
+
+.form {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  padding: 5em;
+}
+
+.form > form {
+  width: 100%;
+  max-width: 565px;
+}
+
+fieldset {
+  flex-wrap: wrap;
+  -webkit-flex: 1 1 300px;
+  flex: 1 1 300px;
+  border-radius: 5px;
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-top: 30px;
+  border: none;
+}
+
+body main > section:nth-child(2) h4,
+body main > section:nth-child(2) h1 {
+  text-align: center;
+  margin: 20px;
+  font-family: "Times New Roman", "Times", "serif";
+}
+
+body main > section:nth-child(2) h4 {
+  font-size: 18px;
+}
+
+body main > section:nth-child(2) h1 {
+  font-size: 38px;
+}
+
+body main > section:nth-child(2) p {
+  font-size: 20px;
+  margin: 20px;
+}
+
+main input {
+  width: 100%;
+  height: 38px;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  height: 88px;
+}
+
+body main > section:nth-child(2) select {
+  height: 38px;
+  width: 100%;
+}
+
+body main > section:nth-child(2) iframe {
+  height: 40vh;
+  width: 100%;
+}
+
+.button2 {
+  font-size: 15px;
+  font-family: Verdana;
+  width: 210px;
+  height: 50px;
+  border-width: 1px;
+  color: rgba(235, 243, 243, 1);
+  border-color: #d6bcd6;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  box-shadow: 3px 4px 16px 0px #899599;
+  text-shadow: 0px 2px 2px rgba(74, 74, 74, 1);
+  background: linear-gradient(rgba(48, 47, 47, 1), rgba(141, 137, 141, 1));
+}
+
+.button3 {
+  font-size: 15px;
+  font-family: Verdana;
+  width: 210px;
+  height: 50px;
+  border-width: 1px;
+  color: rgba(235, 243, 243, 1);
+  border-color: #d6bcd6;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  box-shadow: 3px 4px 16px 0px #899599;
+  text-shadow: 0px 2px 2px rgba(74, 74, 74, 1);
+  background: linear-gradient(rgba(48, 47, 47, 1), rgba(141, 137, 141, 1));
+}
+
+#step {
+  margin-top: 6em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+#step > button {
+  flex: 10em;
+  flex-grow: 0;
+  cursor: pointer;
+}
+
+.button2:hover,.button3:hover {
+  background: linear-gradient(rgba(141, 137, 141, 1), rgba(48, 47, 47, 1));
+}
+
+.g-recaptcha {
+  width: fit-content;
+  transform: scale(1.25);
+  margin-top: 2em;
+  margin-left: 1.5em;
+  -webkit-transform: scale(1.25);
+  transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  height: fit-content;
+}
+
+body main > section:nth-child(2) .g-recaptcha div div iframe{
+  height: fit-content;
+  width: 100%;
+}
+
+.access {
+  width: 10%;
+  height: 28px;
+}
+
+input[type="checkbox"] {
+  margin: 0;
+  margin-right: 0.5em;
+}
+
+input[type="checkbox"] + label {
+  width: 90%;
+}
+
+body > div#text > label {
+  font-size: 50px;
+}
+
+input:focus,
+textarea:focus {
+  background-color: rgb(209, 209, 202);
+}
+
+input[name="firstname"]:focus:valid,
+input[name="lastname"]:focus:valid,
+input[name="phone"]:focus:valid,
+input[name="ic-number"]:focus:valid,
+input[name="email"]:focus:valid {
+  background-color: rgb(220, 255, 220);
+  background-image: url("../assets/images/bookingForm/cg_valid.png");
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+input[name="firstname"]:focus:invalid,
+input[name="lastname"]:focus:invalid,
+input[name="phone"]:focus:invalid,
+input[name="ic-number"]:focus:invalid,
+input[name="email"]:focus:invalid {
+  background-color: rgb(255, 232, 232);
+  background-image: url("../assets/images/bookingForm/cg_invalid.png");
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 550px) {
+  .form {
+    padding: 2em;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  body div > p > label {
+    font-size: 0.75em;
+  }
+
+  #step {
+    padding: 0 1em;
+  }
+
+  #step > button {
+    flex-basis: 8em;
+    font-size: 0.75em;
+  }
+
+  input[type="checkbox"] + label {
+    font-size: 0.75em;
+  }
+
+  .g-recaptcha {
+    margin-left: 0.5em;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .form {
+    padding: 1em 0em;
+  }
+
+  #frame {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  div#frame > iframe {
+    height: 30vh;
+  }
+}

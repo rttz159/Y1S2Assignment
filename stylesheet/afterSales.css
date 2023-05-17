@@ -1,0 +1,222 @@
+@charset "utf-8";
+
+body main > section:nth-child(2) {
+  background-color: rgb(192, 192, 192);
+}
+
+.serviceCenter {
+  background-color: #262525;
+  margin-bottom: 35px;
+  width: 100%;
+  height: 500px;
+  box-shadow: inset 0px -10px 20px 1px rgb(0, 0, 0, 0.7);
+  background-position: center;
+  background-image: url("../assets/images/afterSales/interior.jpeg");
+  background-blend-mode: exclusion;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: blur(0.5px);
+  background-position: 2px;
+  background-blend-mode: exclusion;
+}
+
+.serviceCenter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.serviceCenter h1 {
+  font-size: 60px;
+  padding-top: 80px;
+}
+
+.serviceCenter h2 {
+  font-size: 35px;
+}
+
+#main {
+  background-color: white;
+}
+
+.serviceWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  padding-left: 50px;
+}
+
+.serviceList {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-bottom: 50px;
+  padding-top: 100px;
+}
+
+.serviceWrapper p {
+  width: 80%;
+  line-height: 30px;
+  font-size: 20px;
+}
+
+.o-left {
+  flex-direction: row-reverse;
+  padding-left: 0px;
+}
+
+.o-left div {
+  padding-left: 30px;
+  padding-top: 30px;
+}
+.serviceWrapper div {
+  z-index: 3;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.serviceWrapper h1 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.serviceWrapper img {
+  width: 60%;
+  height: 400px;
+}
+
+@media screen and (max-width: 1024px) {
+  .serviceCenter {
+    padding-top: 200px;
+    justify-content: end;
+    padding-right: 35px;
+  }
+  .serviceWrapper p {
+    font-size: 17.5px;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .serviceWrapper p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .serviceWrapper img {
+    width: 50%;
+    height: 75%;
+  }
+
+  .serviceWrapper p {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  div.serviceList {
+    padding: 0;
+    gap: 0;
+  }
+
+  .serviceWrapper {
+    gap: 0;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .serviceWrapper p {
+    font-size: 15px;
+    line-height: 25px;
+  }
+
+  .serviceWrapper h1 {
+    padding-top: 25px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .serviceWrapper {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+  }
+
+  .serviceWrapper img {
+    height: 390px;
+    width: 600px;
+    align-self: center;
+    margin: 2em 0;
+  }
+
+  .serviceWrapper div {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  .serviceWrapper div p {
+    font-size: 20px;
+  }
+
+  .serviceWrapper h1 {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 612px) {
+  .serviceCenter {
+    height: 600px;
+    background-position: center;
+    background-image: url("../assets/images/afterSales/carInterior1.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: inset 0px -10px 20px 1px rgb(0, 0, 0, 0.7);
+  }
+
+  .serviceWrapper p {
+    font-size: 14px;
+    line-height: 25px;
+  }
+
+  .serviceWrapper img {
+    padding: 10px;
+    width: 540px;
+    height: 310px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .serviceWrapper p {
+    font-size: 14px;
+    line-height: 25px;
+  }
+
+  .serviceWrapper img {
+    width: 480px;
+    height: 310px;
+  }
+}
+
+@media screen and (max-width: 412px) {
+  .serviceWrapper p {
+    font-size: 10px;
+    line-height: 25px;
+  }
+
+  .serviceWrapper img {
+    width: 400px;
+    height: 310px;
+  }
+}

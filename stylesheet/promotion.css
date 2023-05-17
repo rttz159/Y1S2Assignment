@@ -1,0 +1,333 @@
+@charset "utf-8";
+
+* {
+  box-sizing: border-box;
+}
+
+body main > section:nth-child(2) {
+  height: fit-content;
+  background-color: #f4f6f8;
+}
+
+body .getpromo {
+  min-height: 53vh;
+  height: fit-content;
+  background-image: url("../assets/images/promotion/Buy.jpg");
+  background-position: 50% 63%;
+  background-size: cover;
+  position: relative;
+}
+
+.getpromo div {
+  position: absolute;
+  background-color: #53535377;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.getpromo h2 {
+  margin-top: 0.3em;
+  font-size: 2.9em;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+}
+
+.getpromo p {
+  margin-top: 0.5em;
+  font-size: 1.9em;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+}
+
+body .info-promo {
+  padding-top: 2em;
+  padding-bottom: 40px;
+}
+
+body .info-promo h3 {
+  text-align: center;
+  padding: 1em;
+  font-size: 3em;
+  text-decoration: overline;
+  color: #9aa0a2;
+}
+
+body .info-promo .promo-image {
+  position: relative;
+  width: 55%;
+  margin-left: 10%;
+}
+
+body .info-promo img {
+  cursor: pointer;
+}
+
+body .info-promo .promo-image .img {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+
+body .info-promo .promo-image .middle {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.info-promo .promo-image:hover img {
+  opacity: 0.2;
+}
+
+.info-promo .promo-image:hover .middle {
+  opacity: 1;
+}
+
+body .info-promo .promo-image .middle .text {
+  color: #ae0c19;
+  font-size: 43px;
+  padding: 16px 32px;
+  text-transform: uppercase;
+  word-spacing: 10px;
+}
+
+body .info-promo .wash {
+  position: relative;
+  width: 55%;
+  margin-left: 35%;
+  margin-top: 5%;
+  display: flex;
+}
+
+body .info-promo .wash .img {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+
+body .info-promo .wash .middle {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.info-promo .wash:hover img {
+  opacity: 0.2;
+}
+
+.info-promo .wash:hover .middle {
+  opacity: 1;
+}
+
+body .info-promo .wash .middle .text {
+  color: #ae0c19;
+  font-size: 50px;
+  word-spacing: 10px;
+  padding: 16px 32px;
+  text-transform: uppercase;
+}
+
+body .promotion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 30px;
+  transition: 0.4s;
+}
+
+.active,
+.promotion:hover {
+  background-color: #ccc;
+}
+
+.promotion:after {
+  content: "\002B";
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.intro {
+  font-size: 30px;
+  text-align: center;
+  padding: 0px 20px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.intro > p {
+  padding: 1em 0;
+}
+
+body .enjoypromo {
+  margin-top: 2.5em;
+  background-color: #f5f6f8;
+  min-height: 40vh;
+  padding: 2em 0;
+  background-image: url("../assets/images/promotion/get.jpg");
+  background-position: 50% 63%;
+  background-size: cover;
+  position: relative;
+}
+
+.enjoypromo div {
+  position: absolute;
+  background-color: #312f2f77;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.enjoypromo h2 {
+  margin-top: 0.7em;
+  font-size: 2.7em;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.enjoypromo p {
+  font-size: 0.7em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  text-align: center;
+  width: 20%;
+  color: white;
+}
+
+.enjoypromo button {
+  border: none;
+  padding: 0.5em 1.2em;
+  color: black;
+  border-radius: 1.5em;
+  background-color: white;
+  font-size: 1.25em;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.enjoypromo button > a {
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.75s ease;
+}
+
+.enjoypromo button:hover {
+  background-color: #353535;
+}
+
+.enjoypromo button:hover > a {
+  color: white;
+}
+
+@media screen and (min-width: 1279px) {
+  body .getpromo {
+    width: 100%;
+  }
+
+  body .getpromo .promo-container .center h2 {
+    font-size: 3.5em;
+  }
+
+  body .getpromo .promo-container .center p {
+    font-size: 1.9em;
+    letter-spacing: 0.05em;
+  }
+
+  body .info-promo h3 {
+    font-size: 2.8em;
+  }
+
+  body .info-promo .promo-image .middle .text {
+    font-size: 3.5em;
+  }
+
+  body .info-promo .wash .middle .text {
+    font-size: 3.5em;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  body .getpromo {
+    min-height: 40vh;
+  }
+  body .getpromo h2 {
+    font-size: 2.1em;
+  }
+
+  body .getpromo p {
+    font-size: 1.5em;
+  }
+
+  body .info-promo h3 {
+    font-size: 1.8em;
+  }
+
+  body .info-promo .promo-image img {
+    width: 55%;
+    height: 25%;
+  }
+
+  body .info-promo .promo-image .middle .text {
+    font-size: 1.3em;
+  }
+
+  body .info-promo .wash .middle .text {
+    font-size: 1.5em;
+  }
+
+  body .more .promotion {
+    font-size: 1.3em;
+  }
+
+  body .more .intro {
+    font-size: 1.3em;
+  }
+
+  body .enjoypromo h2 {
+    font-size: 1.8em;
+  }
+}

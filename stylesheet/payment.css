@@ -1,0 +1,339 @@
+section.bodySection {
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  min-height: 570px;
+  width: 100%;
+  position: relative;
+  padding: 3em;
+}
+
+form {
+  width: 100%;
+  height: 100%;
+}
+
+div.container {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.paymentForm {
+  margin: 0 30px;
+  width: 350px;
+  height: 570px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.199);
+  border-radius: 5px;
+  position: relative;
+  background-color: white;
+}
+
+div.paymentForm > div:nth-child(1) {
+  width: 100%;
+  border-bottom: 2px solid rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+}
+
+div.paymentForm > div:nth-child(1) > h1 {
+  font-size: 1.5em;
+  margin-top: 0.5%;
+  margin-bottom: 0.5%;
+}
+
+div.paymentItem {
+  width: 95%;
+  height: 93%;
+  display: flex;
+  flex-direction: column;
+}
+
+div.paymentItem > h1 {
+  font-size: 1.3em;
+  margin-top: 13px;
+}
+
+div.paymentItem > input.info,
+div.cCardContent > input {
+  margin-top: 5px;
+  width: 250px;
+  height: 30px;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0 0 1px 2px rgba(0, 0, 0, 0.123);
+  padding-left: 10px;
+}
+
+div.paymentItem > div.creditcard {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+div.creditcard > h2 {
+  margin-top: 5px;
+}
+
+div.creditcard > div {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  width: 180px;
+}
+
+div.paymentItem > div.creditcard > div > input {
+  margin-left: 5px;
+}
+
+div.paymentItem > div.creditcard > div > img {
+  margin-left: 10px;
+  width: 30px;
+  height: 30px;
+}
+
+div.creditcard > div > p {
+  font-size: 0.8em;
+  font-weight: 500;
+  text-align: center;
+  margin-left: 10px;
+}
+
+div.paymentItem > div.cCardContent {
+  margin-top: 5px;
+  height: 200px;
+  border-radius: 5px;
+}
+
+div.cCardContent > p {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.466);
+  font-size: 0.8em;
+}
+
+/* picture and model info */
+div.picture {
+  margin-left: 30px;
+  margin-right: 30px;
+  width: 500px;
+  height: 570px;
+  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.199);
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+}
+
+div.picture > div:nth-child(1) {
+  width: 100%;
+  border-bottom: 2px solid rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+}
+
+div.picture > div:nth-child(1) > h1 {
+  font-size: 1.5em;
+  margin-top: 0.5%;
+  margin-bottom: 0.5%;
+}
+
+div.picture > div:nth-child(2) {
+  height: 200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.picture > div:nth-child(2) > img.modelimg {
+  object-fit: contain;
+  width: 80%;
+  height: 80%;
+  -webkit-animation: blinks 1s ease-in;
+}
+
+@-webkit-keyframes blinks {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+div.picture > h1.modelname {
+  font-size: 1.3em;
+  text-align: center;
+  -webkit-animation: blink 1s ease-in;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    color: transparent;
+  }
+  100% {
+    color: black;
+  }
+}
+
+div.flexbox2 {
+  margin-top: 5px;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.flexbox2 > h1 {
+  -webkit-animation: blin 1s ease-in;
+}
+
+@-webkit-keyframes blin {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+div.picture > div.flexbox {
+  width: 95%;
+  height: 169px;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 9%;
+}
+
+div.flexbox > div:nth-child(1),
+div.flexbox > div:nth-child(2) {
+  width: 50%;
+}
+
+div.flexbox > div:nth-child(1) > h1,
+div.flexbox > div:nth-child(2) > h1,
+div.flexbox2 > h1 {
+  margin-top: 5px;
+  font-size: 1.3em;
+}
+
+div.flexbox > div:nth-child(1) > input,
+div.flexbox > div:nth-child(2) > input {
+  margin-top: 10px;
+  border: 0;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.089);
+  border-radius: 5px;
+  height: 30px;
+  font-weight: 500;
+  padding-left: 10px;
+}
+
+div.flexbox > div:nth-child(1) > select,
+div.flexbox > div:nth-child(2) > select {
+  margin-top: 10px;
+  border: 0;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.089);
+  border-radius: 5px;
+  height: 30px;
+  font-weight: 500;
+  padding-left: 1%;
+}
+
+div.picture > .purchasebtn {
+  position: absolute;
+  font-weight: 500;
+  bottom: 0%;
+  font-size: 1.3em;
+  transition: ease 0.5s;
+  background-color: white;
+  height: 40px;
+  width: 100%;
+  border: 5px solid rgba(0, 0, 0, 0.432);
+  border-radius: 5px;
+}
+
+div.picture > .purchasebtn:hover {
+  cursor: pointer;
+  transition: ease 0.5s;
+  background-color: rgba(0, 0, 0, 0.432);
+  color: white;
+  border: 0;
+}
+
+.block {
+  display: block;
+}
+
+.none {
+  display: none;
+}
+
+@media screen and (max-width: 930px) {
+  div.container {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+  }
+
+  div.paymentItem {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2em 0;
+  }
+
+  div.paymentItem > input.info,
+  div.cCardContent > input {
+    width: 100%;
+  }
+
+  div.paymentForm {
+    height: fit-content;
+    width: 100%;
+    margin-bottom: 1em;
+  }
+
+  div.picture {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  div.paymentItem {
+    width: 70%;
+  }
+
+  div.picture {
+    height: fit-content;
+  }
+
+  div.picture > div.flexbox {
+    flex-direction: column;
+    position: static;
+    height: fit-content;
+    margin-top: 1em;
+  }
+
+  div.picture > .purchasebtn {
+    margin-top: 1em;
+    position: static;
+  }
+
+  div.flexbox > div:nth-child(1),
+  div.flexbox > div:nth-child(2) {
+    width: 80%;
+  }
+}

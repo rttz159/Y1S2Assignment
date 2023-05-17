@@ -1,0 +1,409 @@
+/* body{
+    max-width: 100vw;
+} */
+
+main > section:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main > section:nth-child(2) .white {
+  background-color: #fff;
+}
+
+main > section:nth-child(2) .cont {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+
+main > section:nth-child(2) .pre {
+  height: 250px;
+  width: 80%;
+  margin-left: 30px;
+  padding-top: 1em;
+}
+
+main > section:nth-child(2) .tboxtwo {
+  width: 500px;
+  display: flex;
+  align-items: center;
+}
+
+main > section:nth-child(2) .texttwo {
+  font-family: "Cambria", "Cochin", "Georgia, Times", "Times New Roman", "serif";
+  font-size: larger;
+  width: 50%;
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+main > section:nth-child(2) .firstheader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main > section:nth-child(2) h1 {
+  text-align: center;
+  font-size: 2.5em;
+  font-family: "Cambria", "Cochin", "Georgia", "Times", "Times New Roman",
+    "serif";
+  color: white;
+}
+
+main > section:nth-child(2) h2 {
+  text-align: center;
+  font-family: "Cambria", "Cochin", "Georgia", "Times", "Times New Roman",
+    "serif";
+}
+
+main > section:nth-child(2) .textstylethree {
+  font-family: "Cambria", "Cochin", "Georgia", "Times", "Times New Roman",
+    "serif";
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+main > section:nth-child(2) .textstylefour {
+  font-family: "Cambria", "Cochin", "Georgia", "Times", "Times New Roman",
+    "serif";
+  text-align: center;
+  width: 50%;
+  font-size: large;
+  margin-top: 20px;
+  color: white;
+}
+
+main > section:nth-child(2) .justforonmiddle {
+  background-color: black;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 35vh;
+  justify-content: center;
+}
+
+main > section:nth-child(2) .fuzheren {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: white;
+  padding-left: 3em;
+  padding-right: 3em;
+  padding-top: 1em;
+}
+
+main > section:nth-child(2) .fuzherenpic {
+  height: 250px;
+  width: 100%;
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1.5em;
+}
+
+main > section:nth-child(2) .secondline {
+  font-size: 300%;
+  font-family: "Cambria", "Cochin", " Georgia, Times", "Times New Roman",
+    "serif";
+  padding-bottom: 1em;
+  text-align: center;
+  padding-top: 1em;
+}
+
+main > section:nth-child(2) .prebox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 80%;
+  border: 1px solid black;
+  background-color: aliceblue;
+}
+
+main > section:nth-child(2) .fsset {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+main > section:nth-child(2) .fzbox {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  height: 388px;
+  border: 1px solid black;
+  padding: 1em;
+  margin-bottom: 0.5em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  background-color: aliceblue;
+}
+
+main > section:nth-child(2) .fuzheinfo {
+  font-family: "Cambria", "Cochin", "Georgia", "Times", "Times New Roman",
+    "serif";
+}
+
+main > section:nth-child(2) .flipbox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+main > section:nth-child(2) .flipbox:hover {
+  transform: rotateY(180deg);
+}
+
+main > section:nth-child(2) .backbox {
+  background-color: black;
+  color: white;
+  transform: rotateY(180deg);
+  position: absolute;
+  top: 0;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+main > section:nth-child(2) .frontbox,
+main > section:nth-child(2) .backbox {
+  width: 100%;
+  height: 250px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+main > section:nth-child(2) .smallTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main > section:nth-child(2) .smallTitle > p {
+  margin-bottom: 0.25em;
+}
+
+main > section:nth-child(2) .fancyinfo {
+  height: 60vh;
+  width: 100%;
+  position: relative;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  max-width: 1024px;
+}
+
+main > section:nth-child(2) .fancypic {
+  height: 80vh;
+  width: 60%;
+  max-width: 568px;
+  max-height: 379px;
+  display: flex;
+  border: 1px solid black;
+}
+
+main > section:nth-child(2) .fancydot {
+  position: absolute;
+  z-index: 2;
+  left: 25%;
+  top: 25%;
+}
+
+main > section:nth-child(2) .fancyword {
+  font-family: "Cambria", "Cochin", "Georgia", "Times", "Times New Roman",
+    "serif";
+  color: black;
+  text-align: center;
+}
+
+main > section:nth-child(2) .hidden {
+  display: none;
+  position: absolute;
+  right: 75%;
+  top: 0;
+  background-color: antiquewhite;
+  padding: 2em;
+  border-radius: 1em;
+  margin-left: 1em;
+  z-index: 100;
+}
+
+main > section:nth-child(2) .surprise:hover + .hidden {
+  display: block;
+  animation: fancy 2.5s ease;
+}
+
+main > section:nth-child(2) .fancyheader {
+  padding-bottom: 1em;
+  font-size: larger;
+}
+
+@keyframes fancy {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+main > section:nth-child(2) .fancydot2 {
+  position: absolute;
+  right: 25%;
+  top: 70%;
+}
+
+main > section:nth-child(2) .hidden2 {
+  display: none;
+  position: absolute;
+  background-color: antiquewhite;
+  padding: 2em;
+  border-radius: 2em;
+  left: 75%;
+  margin-right: 1em;
+  top: 50%;
+}
+
+main > section:nth-child(2) .surprise2:hover + .hidden2 {
+  display: block;
+  animation: fancy 2.5s ease;
+}
+
+main > section:nth-child(2) .preinfo {
+  text-align: center;
+  margin-bottom: 10pxs;
+}
+
+main > section:nth-child(2) .prebigbox {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1em;
+}
+
+main > section:nth-child(2) .texttwo {
+  margin-top: 1em;
+  padding: 0.5em;
+}
+
+@media screen and (max-width: 1054px) {
+  main > section:nth-child(2) .fancypic {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 1040px) {
+  main > section:nth-child(2) .container {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 925px) {
+  main > section:nth-child(2) .fzbox {
+    width: 90%;
+    padding: 0.1em;
+  }
+
+  main > section:nth-child(2) .fuzheren {
+    display: flex;
+    width: 90%;
+    flex-wrap: wrap;
+  }
+
+  main > section:nth-child(2) .texttwo {
+    font-size: 1em;
+  }
+
+  main > section:nth-child(2) .hidden {
+    display: block;
+    width: 90%;
+    left: 0;
+    position: static;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+  }
+
+  main > section:nth-child(2) .hidden2 {
+    width: 90%;
+    display: block;
+    left: 0;
+    position: static;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+  }
+
+  main > section:nth-child(2) .fancypic {
+    display: none;
+  }
+
+  main > section:nth-child(2) .fancydot {
+    display: none;
+  }
+
+  main > section:nth-child(2) .fancydot2 {
+    display: none;
+  }
+  main > section:nth-child(2) .fancyinfo {
+    height: fit-content;
+  }
+
+  main > section:nth-child(2) .smallTitle > p:last-child {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 716px) {
+  main > section:nth-child(2) h1 {
+    font-size: x-large;
+  }
+
+  main > section:nth-child(2) .textstylefour {
+    font-size: 16px;
+  }
+
+  main > section:nth-child(2) .secondline {
+    font-size: x-large;
+  }
+
+  main > section:nth-child(2) .cont {
+    flex-wrap: wrap;
+  }
+
+  main > section:nth-child(2) .texttwo {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  main > section:nth-child(2) .cont {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  main > section:nth-child(2) .fuzheren {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  main > section:nth-child(2) .pre {
+    width: 90%;
+    margin-left: 0.8em;
+  }
+}

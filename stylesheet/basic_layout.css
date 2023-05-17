@@ -1,0 +1,822 @@
+@charset "utf-8";
+/*
+   Group Assignment
+   Basic Layout Design
+   Filename: basic_layout.css
+
+   This file contains the basic layout styles used in the Lux-G website
+   Author: Raymond Teng Toh Zi
+*/
+
+/* IMPORT */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap");
+
+/* RESET */
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  display: block;
+}
+
+body {
+  width: 100%;
+  font-family: "Open Sans", "Times New Roman", Times, serif;
+  max-width: 1980px;
+  min-width: 320px;
+  overflow-x: hidden;
+  height: 100vh;
+  scroll-behavior: smooth;
+}
+
+/* BASIC-UTILITIES */
+.nowrap {
+  white-space: nowrap;
+}
+
+.center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* STRUCTURAL-DESIGN */
+.grid-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 5em 1fr 27em;
+}
+
+/* HEADER */
+.grid-container header {
+  grid-column: 1/-1;
+  background-color: #fff;
+  padding: 1em;
+  height: fit-content;
+  position: relative;
+}
+
+/* NAVIGATION-STYLES */
+.grid-container > header {
+  z-index: 1000000000000;
+}
+
+.grid-container > header img:nth-child(1) {
+  margin-right: 1vw;
+}
+
+.grid-container > header .flex-container figure {
+  margin-left: 1em;
+}
+
+.grid-container > header > nav > ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.grid-container > header > nav > ul > span {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.grid-container > header > nav ul {
+  list-style-type: none;
+}
+
+.grid-container > header > nav ul > span > li {
+  margin: 0em 2em;
+  position: relative;
+  font-weight: bolder;
+}
+
+.grid-container > header > nav > ul > span > li {
+  margin: 0em 2em;
+  position: relative;
+  flex: 0 1 5em;
+}
+
+.grid-container > header > nav ul > span > li:nth-child(1) {
+  margin-right: auto;
+}
+
+.grid-container > header > nav > ul > span li a:any-link {
+  text-transform: uppercase;
+}
+
+.grid-container > header > nav ul > span > li a {
+  display: inline-block;
+  position: relative;
+  font-weight: bolder;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.grid-container > header > nav ul > span > li > a::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 2px;
+  width: 100%;
+  bottom: -5px;
+  left: 0;
+  transition: transform 0.25s ease-out;
+  transform: scaleX(0);
+  transform-origin: bottom center;
+}
+
+.grid-container > header > nav > ul > span > li.not-hidden > ul::before {
+  content: "";
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 2px;
+  transition: transform 0.25s ease-out;
+  transform: scaleX(0);
+  margin-left: 0.5em;
+  top: 0;
+  width: 100%;
+  left: -0.5em;
+  transform-origin: center;
+}
+
+.grid-container > header > nav > ul > span > li.not-hidden > ul:hover::before,
+.grid-container > header > nav ul > span > li a:hover::after,
+.grid-container > header .hamburgerMenu > li.not-hidden > button:hover::after {
+  transform: scaleX(1);
+}
+
+.grid-container > header > nav ul > span > li a:link,
+.grid-container > header > nav ul > span > li a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+.grid-container > header > nav ul > span > li a:focus,
+.grid-container > header > nav ul > span > li a:active,
+.grid-container > header > nav ul > span > li a:hover,
+.grid-container > header .hamburgerMenu > li.not-hidden > button:hover,
+.grid-container > header .hamburgerMenu > li.not-hidden > button:focus,
+.grid-container > header .hamburgerMenu > li.not-hidden > button:active {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.grid-container
+  > header
+  > nav
+  ul
+  > span
+  > li.not-hidden:nth-child(3)
+  > ul.dropDown,
+.grid-container
+  > header
+  > nav
+  ul
+  > span
+  > li.not-hidden:nth-child(3)
+  > a:focus
+  > ul.dropDown,
+.grid-container
+  > header
+  > nav
+  ul
+  > span
+  > li.not-hidden:nth-child(4)
+  > a:focus
+  > ul.dropDown,
+.grid-container
+  > header
+  > nav
+  ul
+  > span
+  > li.not-hidden:nth-child(4)
+  > ul.dropDown {
+  animation: dropdown 0.3s ease-out;
+  display: flex;
+}
+
+.grid-container > header > nav > ul > span > li.not-hidden > ul {
+  border-radius: 0 0 0.5em 0.5em;
+  background-color: #fff;
+  padding: 1em 0;
+  position: absolute;
+  left: -2.5em;
+  top: 2.5em;
+  display: none;
+  flex-direction: column;
+  width: 9em;
+  z-index: 1000000000000;
+}
+
+.grid-container > header > nav > ul > span > li > ul li {
+  margin: 0;
+  display: block;
+  width: 100%;
+}
+
+.grid-container > header > nav > ul > span > li > ul > li a {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 0.6em 0;
+}
+
+.grid-container > header > nav > ul > span > li > ul > li a:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.grid-container > header input {
+  border: none;
+  border-bottom: 1px solid #000;
+  background-color: #fff;
+  margin-right: 0.5em;
+}
+
+.grid-container > header input:focus {
+  outline: none;
+}
+
+.grid-container > header > nav > ul > span.hamburgerMenu > li.not-hidden > div {
+  display: flex;
+  flex-direction: row;
+}
+
+.grid-container
+  > header
+  > nav
+  > ul
+  > span.hamburgerMenu
+  > li.not-hidden
+  > div
+  > button {
+  border: none;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+.grid-container
+  > header
+  > nav
+  > ul
+  > span.hamburgerMenu
+  > li.not-hidden
+  > div
+  > button:hover {
+  transform: scale(1.3);
+}
+
+.grid-container
+  > header
+  > nav
+  > ul
+  > span.hamburgerMenu
+  > li.not-hidden
+  > div
+  > button:active {
+  transform: scale(1);
+}
+
+.grid-container
+  > header
+  > nav
+  > ul
+  > span.hamburgerMenu
+  > li.not-hidden
+  > div
+  > button
+  img {
+  margin: 0;
+}
+
+.grid-container > header input::placeholder {
+  font-size: min(1rem, 20vh);
+}
+
+.grid-container > header input::-ms-input-placeholder {
+  font-size: min(1rem, 20vh);
+}
+
+.grid-container > header .not-hidden input:focus {
+  animation: searchbar 0.5s ease;
+  transform-origin: center;
+}
+
+.grid-container > header .not-hidden input:focus + button {
+  animation: searchbar 0.5s ease;
+}
+
+.grid-container > header .not-hidden button {
+  background-color: #fff;
+}
+
+.grid-container > header .flex-container > button.hidden {
+  display: none;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+/* SEARCH-MENU */
+.searchMenu {
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: fit-content;
+  justify-content: center;
+  align-items: start;
+  border-top: 1px solid #000;
+  z-index: 1000000000000;
+}
+
+.searchMenu > ul {
+  background-color: #fff;
+  width: 80%;
+  height: fit-content;
+  text-align: center;
+  list-style-type: none;
+  padding: 0 0 1em;
+  border-radius: 0 0 10px 10px;
+  font-weight: bold;
+  z-index: 10000000;
+  border: 1px solid #000;
+}
+
+.searchMenu > ul > li:nth-child(1) {
+  width: 100%;
+  margin: 1em 0;
+  display: flex;
+  justify-content: end;
+}
+
+.searchMenu > ul > li > button {
+  background-color: #fff;
+  border: none;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  margin-right: 2vw;
+}
+
+.searchMenu > ul > li > button:hover {
+  opacity: 0.7;
+}
+
+.searchMenu > ul > li > a {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: black;
+  padding: 1.5em 0;
+  border-radius: 5px;
+}
+
+.searchMenu > ul > li > a:hover,
+.searchMenu > ul > li > a:focus {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+main .show {
+  display: flex;
+}
+
+#warning {
+  padding: 1.5em 0;
+  background: none;
+}
+
+/* HAMBURGER */
+.hamburger-button {
+  display: none;
+  cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 30px;
+  height: 4px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+  border-radius: 2em;
+}
+
+.change .bar1 {
+  transform: translate(0, 10px) rotate(-45deg);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: translate(0, -10px) rotate(45deg);
+}
+
+/* MAIN */
+.grid-container main {
+  position: relative;
+  grid-column: 1/-1;
+  background-color: white;
+  height: fit-content;
+}
+
+.grid-container main::before {
+  content: "";
+  position: absolute;
+  z-index: 1000000;
+  background-color: rgba(0, 0, 0, 0.6);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+}
+
+.grid-container > main#main.showOverlay::before {
+  display: block;
+}
+
+/* FOOTER */
+.grid-container footer {
+  grid-column: 1/-1;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: fit-content;
+  position: relative;
+}
+
+.grid-container footer > button {
+  margin-top: 2em;
+  border: none;
+  transition: opacity 0.2s ease;
+  transition: transform 0.2s ease;
+  background-color: #fff;
+}
+
+.grid-container footer > button a:link,
+.grid-container footer > button a:hover,
+.grid-container footer > button a:focus,
+.grid-container footer > button a:visited {
+  font: inherit;
+  color: #000;
+  text-decoration: none;
+}
+
+.grid-container footer > button:hover {
+  opacity: 0.7;
+  background-color: rgba(0, 0, 0, 0);
+  transform: translateY(-5px);
+}
+
+.grid-container footer > button {
+  font-weight: 700;
+}
+
+.grid-container footer > button a,
+.grid-container footer > button span {
+  display: block;
+}
+
+.grid-container footer > div > .flex-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.grid-container footer > div {
+  width: 80%;
+}
+
+.grid-container footer > div > div {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  padding-bottom: 2em;
+  border-bottom: 1px solid #000;
+}
+
+.grid-container footer > div > div > ul {
+  display: block;
+  margin-right: 6%;
+}
+
+.grid-container footer h2 {
+  font-size: 1.25em;
+  font-weight: normal;
+  margin-bottom: 1em;
+  margin-right: 6.5%;
+}
+
+.grid-container footer > div > div > ul li {
+  list-style-type: none;
+  display: inline-block;
+  margin-left: 2em;
+}
+
+.grid-container footer .flex-container > div > h2 {
+  margin: 1.5em 0 1em 0;
+}
+
+.grid-container footer .flex-container > div > ul li {
+  list-style-type: none;
+  margin: 0.5em 0;
+}
+
+.grid-container footer .flex-container > div > ul li > a {
+  text-decoration: none;
+  color: #000;
+  font-size: 0.9em;
+}
+
+.grid-container > footer > div > a:any-link {
+  color: inherit;
+}
+
+.grid-container > footer > div > a:hover {
+  opacity: 0.7;
+}
+
+.grid-container > footer > div > a > p {
+  margin: 5em 0 1em 0;
+  font-size: 0.8em;
+}
+
+/* CHAT BOT */
+.grid-container main > section.chatbot {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: fit-content;
+  z-index: 100000000000000000000000;
+}
+
+.grid-container main > section.chatbot > button {
+  cursor: pointer;
+  width: 5em;
+}
+
+.grid-container main > section.chatbot > button > img {
+  width: 100%;
+}
+
+.grid-container main > section.chatbot > iframe {
+  display: none;
+}
+
+.grid-container main > section.chatbot > iframe.show {
+  display: block;
+  position: relative;
+}
+
+/* MEDIA-QUERIES */
+/* HEADER */
+@media screen and (max-width: 1120px) {
+  .grid-container > header > nav > ul > span > li {
+    margin: 0em 1em;
+  }
+}
+
+@media screen and (max-width: 940px) {
+  /* HEADER */
+  .grid-container > header li:nth-child(1) {
+    margin-left: 0;
+  }
+
+  .grid-container > header > nav > ul {
+    flex-direction: column;
+  }
+
+  .grid-container > header .flex-container {
+    margin: 0;
+    display: flex;
+    width: 90vw;
+    align-items: center;
+  }
+
+  .grid-container > header .flex-container > button.hidden {
+    display: block;
+  }
+
+  .grid-container > header .hamburgerMenu > li.not-hidden:last-child {
+    display: none;
+  }
+
+  .grid-container > header > nav > ul > .hamburgerMenu {
+    display: none;
+    flex-direction: column;
+    animation: dropdown 0.4s ease;
+    transform-origin: top;
+    position: absolute;
+    background-color: #fff;
+    width: 100vw;
+    top: 4.5em;
+    border-radius: 0 0 15px 15px;
+    z-index: 1000000000000;
+    border-top: 2px solid black;
+  }
+
+  .grid-container > header > nav > ul > li {
+    margin: 0;
+  }
+
+  .grid-container > header > nav > ul > span > li {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 1 3em;
+  }
+
+  .grid-container > header > nav > ul > span > li > * {
+    width: 100%;
+    height: 100%;
+  }
+
+  .grid-container > header > nav > ul > span > li > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .grid-container > header > nav > ul > span > li > div > input {
+    width: 50%;
+    padding: 0.5em 0;
+    font-size: 1.25em;
+  }
+
+  .grid-container > header > nav > ul > span > li > div > input::placeholder {
+    text-align: center;
+  }
+
+  .grid-container
+    > header
+    > nav
+    > ul
+    > span.hamburgerMenu
+    > li.not-hidden
+    > div
+    > button
+    img {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* SEARCHMENU */
+  .searchMenu {
+    top: 4em;
+    border-top: none;
+  }
+
+  .searchMenu > ul {
+    width: 100%;
+    border: none;
+  }
+
+  .grid-container > header > nav > ul > span > li:first-child {
+    margin: 1em 0;
+  }
+
+  .grid-container > header > nav > ul > span > li:not(:first-child):hover {
+    background-color: #e8e6e6;
+  }
+
+  .grid-container > header > nav > ul > span > li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2em 0;
+  }
+
+  .grid-container > header .hamburger-button {
+    display: inline-block;
+  }
+  .grid-container > header > nav > ul > span > li.not-hidden > ul::before {
+    display: none;
+  }
+
+  .grid-container > header > nav > ul > span > li.not-hidden > ul::before,
+  .grid-container > header > nav ul > span > li a::after,
+  .grid-container > header .hamburgerMenu > li.not-hidden > button::after {
+    background-color: transparent;
+  }
+
+  .grid-container
+    > header
+    > nav
+    ul
+    > span
+    > li.not-hidden:nth-child(3)
+    > ul.dropDown,
+  .grid-container
+    > header
+    > nav
+    ul
+    > span
+    > li.not-hidden:nth-child(3)
+    > a:focus
+    > ul.dropDown,
+  .grid-container
+    > header
+    > nav
+    ul
+    > span
+    > li.not-hidden:nth-child(4)
+    > a:focus
+    > ul.dropDown,
+  .grid-container
+    > header
+    > nav
+    ul
+    > span
+    > li.not-hidden:nth-child(4)
+    > ul.dropDown {
+    display: none;
+  }
+
+  .grid-container > header > nav > ul > .show {
+    display: flex;
+  }
+
+  /* FOOTER */
+  .grid-container footer > div > div {
+    align-items: center;
+  }
+
+  .grid-container footer > div > div h2 {
+    margin-top: 1.5em;
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 513px) {
+  /* CHATBOT */
+  .grid-container main > section.chatbot {
+    display: none;
+  }
+
+  /* FOOTER */
+  .grid-container > footer .flex-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .grid-container > footer .flex-container div {
+    padding-bottom: 1em;
+    border-bottom: 1px solid #000;
+  }
+
+  .grid-container > footer > div > p {
+    font-size: 0.7em;
+    text-align: center;
+  }
+}
+
+/* ANIMATION*/
+@keyframes dropdown {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+    transform-origin: top;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes flowin {
+  0% {
+    opacity: 0;
+    display: none;
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    display: block;
+    transform: translateX(0);
+  }
+}
+
+@keyframes searchbar {
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}

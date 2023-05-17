@@ -1,0 +1,712 @@
+/*
+   Group Assignment
+   Filename: vehiclePreference.css
+
+   This file contains the styles for vehiclePreference.html or vehicle recommendation page
+   Author: Raymond Teng Toh Zi
+*/
+
+/* GENERAL */
+body main > section:nth-child(2) {
+  background-color: white;
+}
+
+/* INTRO */
+body main > section > section.intro {
+  min-height: 40vh;
+  height: fit-content;
+  background-color: #f4f6f8;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+body main > section > section.intro > div {
+  flex: 1 0 499px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body main > section > section.intro > div:last-child {
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2em;
+}
+
+body main > section > section.intro > div > img {
+  width: 100%;
+}
+
+body main > section > section.intro > div:last-child > h2 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+
+/* VIDEO */
+body main > section > div.video {
+  position: relative;
+}
+
+body main > section > div.video > video {
+  width: 100%;
+}
+
+/* OVERLAY */
+body main > section > div.video > div.overlay {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000000dd;
+  transform-origin: center center;
+  z-index: 9999;
+}
+
+body main > section > div.video > div.overlay.disappear {
+  animation: disappear 1s ease forwards;
+}
+
+body main > section > div.video > div.overlay.disappear > button {
+  animation: disappear 2s ease forwards;
+  cursor: default;
+}
+
+body main > section > div.video > div.overlay.appear {
+  animation: appear 1s ease forwards;
+}
+
+body main > section > div.video > div.overlay > button {
+  padding: 0.75em 1.5em;
+  border: 1px solid #fff;
+  font-size: 1.5em;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: opacity 0.15s ease;
+}
+
+body main > section > div.video > div.overlay > button:hover {
+  opacity: 0.8;
+}
+
+/* MAIN-CONTENT */
+body main > section:nth-child(2) {
+  height: fit-content;
+}
+
+body main > section > section.main_content {
+  background-color: #f4f6f8;
+  min-height: 60vh;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  position: relative;
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+body main > section > section.main_content > div.first {
+  display: flex;
+  height: 30vh;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+body main > section > section.main_content > div.first > h2 {
+  line-height: 1.25em;
+  font-size: 2.5em;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: -1px;
+}
+
+body main > section > section.main_content > div.first > p {
+  text-align: center;
+  font-size: 1.25em;
+  width: 80%;
+  line-height: 1.25em;
+}
+
+body main > section > section.main_content > div.first > button {
+  background-color: #394855;
+  padding: 1em 1.75em;
+  color: #f4f6f8;
+  cursor: pointer;
+  border: none;
+  transition: opacity 0.3s ease;
+}
+
+body main > section > section.main_content > div.first > button:hover {
+  opacity: 0.7;
+}
+
+/* QUESTIONS */
+/* CONTAINER */
+body main > section > section.main_content > div.questions {
+  position: absolute;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: row;
+  min-height: 60vh;
+  height: fit-content;
+  transform: translateY(35em);
+  transition: opacity 0.75s ease, transform 1.25s ease;
+  opacity: 0;
+}
+
+body main > section > section.main_content > div.questions > div {
+  transform: translateX(100vw);
+}
+
+body main > section > section.main_content > div.questions > div > div {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #394855;
+  height: 50vh;
+}
+
+/* TEXT */
+body main > section > section.main_content > div.questions h1 {
+  line-height: 1.25em;
+  font-size: 2.5em;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: -1px;
+}
+
+body main > section > section.main_content > div.questions p {
+  text-align: center;
+  font-size: 1.25em;
+  width: 80%;
+  margin-top: 1em;
+  line-height: 1.25em;
+}
+
+/* BUTTONS */
+body main > section > section.main_content > div.questions button {
+  border: none;
+  background-color: #394855;
+  color: white;
+  padding: 0.5em;
+  font-size: 1.25em;
+  cursor: pointer;
+  transition: all 0.35s ease;
+}
+
+body main > section > section.main_content > div.questions button > img {
+  width: 32px;
+}
+
+body main > section > section.main_content > div.questions button:hover {
+  opacity: 0.8;
+}
+
+button#done {
+  position: absolute;
+  font-size: 1.25em;
+  padding: 0.75em 1.5em;
+  border: 1px solid #d1f5ff;
+}
+
+button#done:hover {
+  background-color: #d1f5ff;
+  color: #394855;
+}
+
+body
+  main
+  > section
+  > section.main_content
+  > div.questions
+  div
+  > div
+  > div:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #d1f5ff;
+  width: 100%;
+  flex-basis: 50%;
+}
+
+body
+  main
+  > section
+  > section.main_content
+  > div.questions
+  div
+  > div
+  > div:last-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  flex-basis: 50%;
+  position: relative;
+}
+
+body
+  main
+  > section
+  > section.main_content
+  > div.questions
+  div
+  > div
+  input[type="radio"] {
+  display: none;
+}
+
+body
+  main
+  > section
+  > section.main_content
+  > div.questions
+  div
+  > div
+  input[type="radio"]:checked
+  + label {
+  color: #394855;
+  background-color: #d1f5ff;
+}
+
+body
+  main
+  > section
+  > section.main_content
+  > div.questions
+  div
+  > div
+  input[type="radio"]
+  + label:hover {
+  color: #394855;
+  background-color: #d1f5ff;
+}
+
+body main > section > section.main_content > div.questions > div > div label {
+  display: inline-block;
+  font-size: 1.75em;
+  cursor: pointer;
+  padding: 0.5em 1.25em;
+  background-color: #394855;
+  color: #fff;
+  transition: all 0.15s ease;
+}
+
+/* INDIVIDUAL QUESTIONS */
+body main > section > section.main_content > div.questions > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  height: fit-content;
+  background-color: #f4f6f8;
+  width: 100vw;
+  transition: all 1s ease;
+}
+
+/* EXPLAINATION */
+body main > section > section.explaination {
+  background-color: white;
+  height: fit-content;
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body main > section > section.explaination > div {
+  padding: 3em 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+body main > section > section.explaination > div > h2 {
+  line-height: 1.25em;
+  font-size: 2.5em;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: -1px;
+  flex-basis: 50%;
+}
+
+body main > section > section.explaination > div > p {
+  flex-basis: 50%;
+  border-left: 2px solid #394855;
+  padding: 4em 2em;
+  font-size: 1.25em;
+  text-align: center;
+  line-height: 1.1em;
+}
+
+/* RESULT */
+body main > section > section.result {
+  height: fit-content;
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f6f8;
+}
+
+body main > section > section.result > div {
+  padding: 3em 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body main > section > section.result > div > h2 {
+  line-height: 1.25em;
+  font-size: 2.5em;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: -1px;
+  margin-bottom: 1em;
+}
+
+body main > section > section.result > div > img {
+  width: 50%;
+  margin-bottom: 1.5em;
+}
+
+body main > section > section.result > div > a:any-link {
+  padding: 0.75em 1.5em;
+  background-color: #000;
+  color: white;
+  font-size: 1.25em;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+body main > section > section.result > div > a:hover {
+  opacity: 0.7;
+}
+
+/* Price Table */
+body main > section > section.priceTable {
+  padding: 2em 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body main > section > section.priceTable > h2 {
+  line-height: 1.25em;
+  font-size: 2.5em;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: -1px;
+  margin: 1em 0;
+}
+
+body main > section > section.priceTable > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body main > section > section.priceTable > div > table {
+  width: 80%;
+  caption-side: bottom;
+  border-collapse: collapse;
+  border: 2px solid black;
+  text-align: left;
+}
+
+body main > section > section.priceTable > div > table caption {
+  margin-top: 1em;
+}
+
+body main > section > section.priceTable > div > table td,
+body main > section > section.priceTable > div > table th {
+  padding: 1em;
+  border: 1px solid black;
+}
+
+body main > section > section.priceTable > div > table th {
+  background-color: #9cd6e4;
+  text-align: center;
+}
+
+body main > section > section.priceTable > div > table > thead > tr {
+  border-bottom: 2px solid black;
+}
+
+body main > section > section.priceTable > div > table > thead > tr > th {
+  border: 2px solid black;
+}
+
+body main > section > section.priceTable > div > table > tbody > tr > th {
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+body
+  main
+  > section
+  > section.priceTable
+  > div
+  > table
+  > tbody
+  > tr:nth-child(even) {
+  background-color: aliceblue;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 998px) {
+  /* INTRO */
+  body main > section > section.intro > div > img {
+    width: 80%;
+    margin-top: 2em;
+  }
+
+  body main > section > section.intro > div:last-child {
+    flex-direction: column;
+    align-items: center;
+    padding: 3em 1em;
+  }
+
+  body main > section > section.intro > div:last-child > h2 {
+    text-align: center;
+    font-size: 2.25em;
+  }
+
+  body main > section > section.intro > div:last-child > p {
+    text-align: center;
+  }
+
+  body main > section > section.priceTable > h2 {
+    font-size: 2.25em;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  /* VIDEO */
+  body main > section > div.video {
+    display: none;
+  }
+
+  /* QUESTION */
+  body main > section > section.main_content {
+    border: 1px solid #394855;
+  }
+
+  body main > section > section.main_content > div.questions > div > div {
+    width: 80%;
+  }
+
+  body main > section > section.main_content > div.first > h2 {
+    font-size: 2em;
+  }
+
+  body main > section > section.main_content > div.first > p {
+    font-size: 1em;
+  }
+
+  /* TEXT */
+  body main > section > section.main_content > div.questions h1 {
+    font-size: 2em;
+  }
+
+  body main > section > section.main_content > div.questions p {
+    font-size: 1em;
+  }
+
+  body main > section > section.main_content > div.questions button {
+    font-size: 1em;
+  }
+
+  body main > section > section.main_content > div.questions > div > div label {
+    font-size: 1.25em;
+  }
+  /* EXPLAINATION */
+  body main > section > section.explaination > div > h2 {
+    font-size: 2em;
+  }
+
+  body main > section > section.explaination > div > p {
+    font-size: 1em;
+  }
+
+  /* RESULT */
+  body main > section > section.result > div > h2 {
+    font-size: 2em;
+  }
+
+  /* PRICE TABLE */
+  body main > section > section.priceTable > h2 {
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  /* PRICE TABLE */
+  body
+    main
+    > section
+    > section.priceTable
+    > div
+    > table
+    > thead
+    > tr
+    > th:first-child,
+  body
+    main
+    > section
+    > section.priceTable
+    > div
+    > table
+    > tbody
+    > tr
+    > th:first-child {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 586px) {
+  /* INTRO */
+  body main > section > section.intro > div {
+    flex: 1 0 300px;
+    display: flex;
+  }
+
+  body main > section > section.intro > div:last-child > h2 {
+    font-size: 1.5em;
+  }
+
+  /* QUESTIONS */
+  body main > section > section.main_content > div.first > h2 {
+    font-size: 1.5em;
+  }
+
+  body main > section > section.main_content > div.first > p {
+    font-size: 0.9em;
+  }
+
+  body
+    main
+    > section
+    > section.main_content
+    > div.questions
+    div
+    > div
+    > div:last-child {
+    width: 100%;
+  }
+
+  body main > section > section.main_content > div.questions > div > div {
+    width: 90%;
+  }
+
+  body main > section > section.main_content > div.questions button > img {
+    width: 24px;
+  }
+
+  /* EXPLAINATION */
+  body main > section > section.explaination > div {
+    padding: 3em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  body main > section > section.explaination > div > h2 {
+    font-size: 1.5em;
+  }
+
+  body main > section > section.explaination > div > p {
+    font-size: 0.9em;
+    border-left: none;
+    border-top: 2px solid #394855;
+    padding: 1em;
+    width: 80%;
+    margin-top: 1em;
+  }
+
+  /* RESULT */
+  body main > section > section.result > div > h2 {
+    font-size: 1.5em;
+  }
+
+  body main > section > section.result > div > a:any-link {
+    font-size: 0.9em;
+  }
+
+  /* PRICE TABLE */
+  body main > section > section.priceTable > div > table td,
+  body main > section > section.priceTable > div > table th {
+    padding: 0.5em;
+  }
+
+  body main > section > section.priceTable > h2 {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  /* INTRO */
+  body main > section > section.intro > div:last-child > h2 {
+    font-size: 1.5em;
+  }
+
+  /* PRICE TABLE */
+  body main > section > section.priceTable > div > table td,
+  body main > section > section.priceTable > div > table th {
+    font-size: 0.75em;
+  }
+}
+
+/* ANIMATION */
+@keyframes disappear {
+  0% {
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    display: flex;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

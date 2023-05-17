@@ -1,0 +1,350 @@
+@charset "utf-8";
+
+* {
+  box-sizing: border-box;
+}
+body main > section:nth-child(2) {
+  font-family: Verdana, sans-serif;
+}
+.mySlides {
+  display: none;
+}
+img {
+  vertical-align: auto;
+}
+
+body main > section:nth-child(2) {
+  height: fit-content;
+  background-color: #f4f6f8;
+}
+
+/* Slideshow container */
+.show-container {
+  display: flex;
+  position: relative;
+  margin: auto;
+  height: fit-content;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body .information h1 {
+  min-height: 10vh;
+  height: fit-content;
+  font-style: oblique;
+  font-size: 3em;
+  text-align: center;
+  text-shadow: 2px 2px #ff0000;
+  padding-top: 0.6em;
+}
+
+.container {
+  min-height: 20vh;
+  height: fit-content;
+  padding-top: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .zoom-image {
+  max-width: 100%;
+}
+
+.container div ul {
+  font-size: 1em;
+  margin-left: 50px;
+  font-weight: lighter;
+  list-style: square;
+}
+
+body .infor {
+  min-height: 25vh;
+  height: fit-content;
+  padding-top: 2em;
+}
+
+section.infor div details {
+  background-color: #d2d6dd;
+  padding: 1.5em;
+  border: 1px solid #fcfafa;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: larger;
+  flex-direction: row;
+}
+
+section.infor div details > ul {
+  margin-left: 2em;
+}
+
+details[open] {
+  animation: sweep 0.5s ease;
+}
+
+@keyframes sweep {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body .invite {
+  background-color: white;
+  min-height: 70vh;
+  height: fit-content;
+}
+
+body .invite h3 {
+  text-align: center;
+  padding: 1em;
+  font-size: 2.2em;
+  text-decoration: overline;
+  color: #9aa0a2;
+}
+
+body .invite *,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body .invite .invite-container {
+  float: left;
+  width: 33.33%;
+  background-color: white;
+  padding: 0 8px;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 2em;
+}
+
+body .invite .invite-container .image {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+body .invite .invite-container .invite-name {
+  padding: 0 16px;
+}
+
+body .invite .invite-container .invite-name > h2 {
+  padding: 1em 0;
+  text-align: center;
+}
+
+body .invite .invite-container .invite-name::after,
+.invite-container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+body .joinmember {
+  margin-top: 1em;
+  background-color: #f5f6f8;
+  background-image: url(../assets/images/specialevent/member2.jpg);
+  background-position: 50% 63%;
+  background-size: cover;
+  position: relative;
+  height: 53vh;
+  clear: both;
+}
+
+.joinmember div {
+  position: absolute;
+  background-color: #312f2f77;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.joinmember h2 {
+  margin-top: 0.5em;
+  font-size: 2.7em;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.joinmember p {
+  font-size: 0.7em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  text-align: center;
+  width: 20%;
+  color: rgb(255, 255, 255);
+}
+
+.joinmember button {
+  border: none;
+  padding: 0.7em 1.4em;
+  color: rgb(0, 0, 0);
+  border-radius: 1.5em;
+  background-color: white;
+  font-size: 1.25em;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.joinmember button > a {
+  color: rgb(255, 0, 0);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.75s ease;
+}
+
+.joinmember button:hover {
+  background-color: #5e5151;
+}
+
+.joinmember button:hover > a {
+  color: rgb(43, 128, 240);
+}
+
+/*Big Screen Size*/
+@media screen and (min-width: 1279px) {
+  body .show-container img {
+    width: 100%;
+  }
+
+  body .show-container .img1 {
+    width: 110%;
+  }
+
+  body .information h1 {
+    font-size: 3.3em;
+    margin-bottom: 15px;
+  }
+
+  body .information .flex-container ul {
+    font-size: 1.6em;
+  }
+
+  body .infor .infor-container {
+    font-size: large;
+  }
+
+  body .invite {
+    min-height: 60vh;
+  }
+
+  body .joinmember {
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  body .information h1 {
+    font-size: 2.6em;
+  }
+
+  .container {
+    text-align: center;
+  }
+
+  .container img {
+    width: 75%;
+    height: 50%;
+  }
+
+  .flex-container {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+  }
+
+  body .infor .infor-container {
+    font-size: medium;
+  }
+
+  body .joinmember button {
+    font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 1120px) {
+  body .invite {
+    min-height: 40vh;
+  }
+}
+
+/*Small Screen Size*/
+@media screen and (max-width: 550px) {
+  body .information h1 {
+    font-size: 2em;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+
+  .container img {
+    width: 55%;
+    height: 25%;
+  }
+
+  .flex-container {
+    font-size: 1.1em;
+  }
+
+  body section.infor {
+    margin-top: 20px;
+  }
+
+  body .infor .infor-container {
+    font-size: small;
+  }
+
+  body .invite h3 {
+    font-size: 2em;
+  }
+
+  body .invite .invite-container {
+    width: 75%;
+    display: flex;
+    margin-left: 55px;
+  }
+
+  body .joinmember {
+    height: 33vh;
+  }
+
+  body .joinmember div h2 {
+    font-size: 1.6em;
+  }
+}
